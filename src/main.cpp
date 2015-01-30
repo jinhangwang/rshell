@@ -103,7 +103,7 @@ void command_handling(const char* cmd){ // handling the command
                     // cout << "WEXITSTATUS(condition): " << WEXITSTATUS(condition) << endl;
                     if(0 != WEXITSTATUS(condition)){ // exit properly when condition is 0
                         operateResult = false;  // if command executing failed, turn the operating result to false
-                        cout << "child process abortion" << endl;
+                        cout << "error message: child process abortion" << endl;
                     }
                 }
             }
