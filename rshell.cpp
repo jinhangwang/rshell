@@ -24,6 +24,9 @@ void command_handling(const char* cmd){ // handling the command
     bool jumpflag = false;              // sotre the status if the next command should be execute after the logical operating,
                                         // false for executing the next command, true for not executing
     
+    bool commentflag = false;           // sotre the status of arguement
+                                        // true for turning into comment mode, false for keeping original
+    
     // separate the command string with small parts store in vector<string> param
     char *sep = (char*)" ";             // strtok arguement, separate the command when meet ' '
     char *word, *brkt;                  // strtok arguement
@@ -71,7 +74,6 @@ void command_handling(const char* cmd){ // handling the command
                 }
             }
             argv_size = j;
-            
             if(jumpflag == true){       // initialize the jumpflag
                 jumpflag = false;
             }
@@ -94,7 +96,7 @@ void command_handling(const char* cmd){ // handling the command
                 else{
                     operateResult = true;
                     if(-1 == (waitpid(pid, NULL, 0)) && (errno != EINTR)){ // system call error check
-                        perror("wiatpid error");
+                        perror("waitpid error");
                         exit(0);
                     }
                     int condition;
@@ -116,7 +118,14 @@ void prehandling_command()
 {
     cin.getline(command, MAX_LEN);      // get the command
     int len = strlen(command);
-    for(int i = 0; i < len; i++){       // format input commands like "command;command" as "command ; command"
+    
+    for(int i = 0; i < len; i++)        // handling the comment signal "#"
+        if(command[i] == '#'){
+            command[i] = '\0';
+            break;
+        }
+            
+    for(int i = 0; i < len; i++){       // format input commands like "command_a;command_b" as "command_a ; command_b"
         if(command[i] == ';'){
             len += 2;
             for(int j = len + 1; j >i+2; j--)
