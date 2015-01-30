@@ -21,15 +21,14 @@ void command_handling(const char* cmd){ // handling the command
     char* argv[MAX_LEN];
     
     bool operateResult = false;         // store the status after command execution,
-    // false for error occured, true for executing correctly
+                                        // false for error occured, true for executing correctly
     
     bool jumpflag = false;              // sotre the status if the next command should be execute after the logical operating,
-    // false for executing the next command, true for not executing
+                                        // false for executing the next command, true for not executing
     
-    // separate the command string with small parts store in vector<string> param
     char *sep = (char*)" ";             // strtok arguement, separate the command when meet ' '
     char *word, *brkt;                  // strtok arguement
-    char *partable[MAX_LEN];            // store command and arguement one by one
+    char *partable[MAX_LEN];            // store command and arguement equally
     
     int i = 0;
     for (word = strtok_r(command, sep, &brkt); word; word = strtok_r(NULL, sep, &brkt)){
@@ -78,33 +77,30 @@ void command_handling(const char* cmd){ // handling the command
             }
             else{
                 // operate the command
-                int condition=1;
+                int condition=0;
                 int pid = fork();       // child return 0 , parent return pid, fail return -1
                 if(pid == -1){          // system call errer check
                     perror("fork fail");
                     operateResult = false;
-                    exit(0);
+                    exit(5);
                 }
                 else if (pid == 0){
                     if (execvp(currentCommand,argv) != 0){ // system call error check
                         perror("error in execvp");
                         operateResult = false;              // if command executing failed, turn the operating result to false
-                        cout << "execvp: " << operateResult << endl;
-                        exit(0);
-                        condition = 0;
+                        exit(6);
                     }
                 }
                 else{
                     operateResult = true;
-                    if(-1 == (waitpid(pid, NULL, 0)) && (errno != EINTR)){ // system call error check
+                    if(-1 == (waitpid(pid, &condition, 0)) && (errno != EINTR)){ // system call error check
                         perror("waitpid error");
                         operateResult = false;
-                        exit(0);
                     }
-                    if(!WIFSIGNALED(condition)){ // system call error check
+                    // cout << "WEXITSTATUS(condition): " << WEXITSTATUS(condition) << endl;
+                    if(0 != WEXITSTATUS(condition)){ // exit properly when condition is 0
                         operateResult = false;  // if command executing failed, turn the operating result to false
                         cout << "child process abortion" << endl;
-                        exit(0);
                     }
                 }
             }
@@ -148,7 +144,6 @@ void get_command()
             break;
         }
         command_handling(command);
-        //cout << "execution!" << endl;
     }
 }
 
