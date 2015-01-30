@@ -25,9 +25,6 @@ void command_handling(const char* cmd){ // handling the command
     bool jumpflag = false;              // sotre the status if the next command should be execute after the logical operating,
     // false for executing the next command, true for not executing
     
-    bool commentflag = false;           // sotre the status of arguement
-    // true for turning into comment mode, false for keeping original
-    
     // separate the command string with small parts store in vector<string> param
     char *sep = (char*)" ";             // strtok arguement, separate the command when meet ' '
     char *word, *brkt;                  // strtok arguement
