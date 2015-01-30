@@ -5,11 +5,12 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/wait.h>
-#include "type_prompt.h"
+#include <pwd.h>
+#include <sys/types.h>
+
 using namespace std;
 
 #define MAX_LEN 10000
-
 char command[MAX_LEN];
 
 void command_handling(const char* cmd){ // handling the command
@@ -19,13 +20,13 @@ void command_handling(const char* cmd){ // handling the command
     char* argv[MAX_LEN];
     
     bool operateResult = false;         // store the status after command execution,
-                                        // false for error occured, true for executing correctly
+    // false for error occured, true for executing correctly
     
     bool jumpflag = false;              // sotre the status if the next command should be execute after the logical operating,
-                                        // false for executing the next command, true for not executing
+    // false for executing the next command, true for not executing
     
     bool commentflag = false;           // sotre the status of arguement
-                                        // true for turning into comment mode, false for keeping original
+    // true for turning into comment mode, false for keeping original
     
     // separate the command string with small parts store in vector<string> param
     char *sep = (char*)" ";             // strtok arguement, separate the command when meet ' '
@@ -41,8 +42,8 @@ void command_handling(const char* cmd){ // handling the command
         part.push_back(a);
     }
     
-//    for(int i = 0; i < part.size(); i++)
-//        cout << "part["<< i << "]: " << part.at(i) << endl;
+    //    for(int i = 0; i < part.size(); i++)
+    //        cout << "part["<< i << "]: " << part.at(i) << endl;
     
     for(int i = 0; i < part.size(); i++){
         
@@ -124,7 +125,7 @@ void prehandling_command()
             command[i] = '\0';
             break;
         }
-            
+    
     for(int i = 0; i < len; i++){       // format input commands like "command_a;command_b" as "command_a ; command_b"
         if(command[i] == ';'){
             len += 2;
@@ -138,7 +139,6 @@ void prehandling_command()
     }
 }
 
-
 void get_command()
 {
     while(1){
@@ -150,10 +150,5 @@ void get_command()
         command_handling(command);
         //cout << "execution!" << endl;
     }
-
-}
-
-int main(){
-    get_command();
-    return 0;
+    
 }
