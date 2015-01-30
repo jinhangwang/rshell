@@ -7,6 +7,8 @@
 #include <sys/wait.h>
 #include <pwd.h>
 #include <sys/types.h>
+#include <stdlib.h>
+#include <errno.h>
 #include "rshell.h"
 
 using namespace std;
