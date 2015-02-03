@@ -1,0 +1,872 @@
+Script started on Mon Feb  2 22:07:15 2015
+wangjinhang@will-Pro~/Desktop/rshell/tests $ cd ..
+wangjinhang@will-Pro~/Desktop/rshell $ make
+make: `bin/rshell' is up to date.
+wangjinhang@will-Pro~/Desktop/rshell $ bin/rshell
+[rshell]wangjinhang@will-Pro.local$:
+[rshell]wangjinhang@will-Pro.local$:
+[rshell]wangjinhang@will-Pro.local$:ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls -a
+[36m.[m[m         .DS_Store LICENSE   README.md [36mobj[m[m       [36mtests[m[m
+[36m..[m[m        [36m.git[m[m      Makefile  [36mbin[m[m       [36msrc[m[m
+[rshell]wangjinhang@will-Pro.local$:ls -a -l
+total 80
+drwxr-xr-x  11 wangjinhang  staff    374 Feb  2 21:03 [36m.[m[m
+drwx------+ 37 wangjinhang  staff   1258 Feb  2 22:05 [36m..[m[m
+-rw-r--r--@  1 wangjinhang  staff   8196 Feb  2 21:03 .DS_Store
+drwxr-xr-x  13 wangjinhang  staff    442 Jan 30 15:19 [36m.git[m[m
+-rw-r--r--   1 wangjinhang  staff  18027 Jan 30 14:58 LICENSE
+-rw-r--r--   1 wangjinhang  staff    326 Jan 30 14:58 Makefile
+-rw-r--r--   1 wangjinhang  staff    630 Jan 30 14:58 README.md
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 21:08 [36mbin[m[m
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 21:08 [36mobj[m[m
+drwxr-xr-x   6 wangjinhang  staff    204 Feb  2 21:08 [36msrc[m[m
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 22:07 [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls -a - l  l -r R
+total 80
+drwxr-xr-x  11 wangjinhang  staff    374 Feb  2 21:03 [36m.[m[m
+drwx------+ 37 wangjinhang  staff   1258 Feb  2 22:05 [36m..[m[m
+-rw-r--r--@  1 wangjinhang  staff   8196 Feb  2 21:03 .DS_Store
+drwxr-xr-x  13 wangjinhang  staff    442 Jan 30 15:19 [36m.git[m[m
+-rw-r--r--   1 wangjinhang  staff  18027 Jan 30 14:58 LICENSE
+-rw-r--r--   1 wangjinhang  staff    326 Jan 30 14:58 Makefile
+-rw-r--r--   1 wangjinhang  staff    630 Jan 30 14:58 README.md
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 21:08 [36mbin[m[m
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 21:08 [36mobj[m[m
+drwxr-xr-x   6 wangjinhang  staff    204 Feb  2 21:08 [36msrc[m[m
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 22:07 [36mtests[m[m
+
+./.git:
+total 40
+drwxr-xr-x  13 wangjinhang  staff   442 Jan 30 15:19 [36m.[m[m
+drwxr-xr-x  11 wangjinhang  staff   374 Feb  2 21:03 [36m..[m[m
+-rw-r--r--   1 wangjinhang  staff    23 Jan 30 14:58 HEAD
+drwxr-xr-x   2 wangjinhang  staff    68 Jan 30 14:57 [36mbranches[m[m
+-rw-r--r--   1 wangjinhang  staff   311 Jan 30 14:58 config
+-rw-r--r--   1 wangjinhang  staff    73 Jan 30 14:57 description
+drwxr-xr-x  11 wangjinhang  staff   374 Jan 30 14:57 [36mhooks[m[m
+-rw-r--r--   1 wangjinhang  staff   488 Jan 30 15:10 index
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:57 [36minfo[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36mlogs[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36mobjects[m[m
+-rw-r--r--   1 wangjinhang  staff   107 Jan 30 14:58 packed-refs
+drwxr-xr-x   5 wangjinhang  staff   170 Jan 30 14:58 [36mrefs[m[m
+
+./.git/branches:
+total 0
+drwxr-xr-x   2 wangjinhang  staff   68 Jan 30 14:57 [36m.[m[m
+drwxr-xr-x  13 wangjinhang  staff  442 Jan 30 15:19 [36m..[m[m
+
+./.git/hooks:
+total 80
+drwxr-xr-x  11 wangjinhang  staff   374 Jan 30 14:57 [36m.[m[m
+drwxr-xr-x  13 wangjinhang  staff   442 Jan 30 15:19 [36m..[m[m
+-rwxr-xr-x   1 wangjinhang  staff   452 Jan 30 14:57 [31mapplypatch-msg.sample[m[m
+-rwxr-xr-x   1 wangjinhang  staff   896 Jan 30 14:57 [31mcommit-msg.sample[m[m
+-rwxr-xr-x   1 wangjinhang  staff   189 Jan 30 14:57 [31mpost-update.sample[m[m
+-rwxr-xr-x   1 wangjinhang  staff   398 Jan 30 14:57 [31mpre-applypatch.sample[m[m
+-rwxr-xr-x   1 wangjinhang  staff  1642 Jan 30 14:57 [31mpre-commit.sample[m[m
+-rwxr-xr-x   1 wangjinhang  staff  1352 Jan 30 14:57 [31mpre-push.sample[m[m
+-rwxr-xr-x   1 wangjinhang  staff  4951 Jan 30 14:57 [31mpre-rebase.sample[m[m
+-rwxr-xr-x   1 wangjinhang  staff  1239 Jan 30 14:57 [31mprepare-commit-msg.sample[m[m
+-rwxr-xr-x   1 wangjinhang  staff  3611 Jan 30 14:57 [31mupdate.sample[m[m
+
+./.git/info:
+total 8
+drwxr-xr-x   3 wangjinhang  staff  102 Jan 30 14:57 [36m.[m[m
+drwxr-xr-x  13 wangjinhang  staff  442 Jan 30 15:19 [36m..[m[m
+-rw-r--r--   1 wangjinhang  staff  240 Jan 30 14:57 exclude
+
+./.git/logs:
+total 8
+drwxr-xr-x   4 wangjinhang  staff  136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  13 wangjinhang  staff  442 Jan 30 15:19 [36m..[m[m
+-rw-r--r--   1 wangjinhang  staff  192 Jan 30 14:58 HEAD
+drwxr-xr-x   4 wangjinhang  staff  136 Jan 30 14:58 [36mrefs[m[m
+
+./.git/logs/refs:
+total 0
+drwxr-xr-x  4 wangjinhang  staff  136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  4 wangjinhang  staff  136 Jan 30 14:58 [36m..[m[m
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36mheads[m[m
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36mremotes[m[m
+
+./.git/logs/refs/heads:
+total 8
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  4 wangjinhang  staff  136 Jan 30 14:58 [36m..[m[m
+-rw-r--r--  1 wangjinhang  staff  192 Jan 30 14:58 master
+
+./.git/logs/refs/remotes:
+total 0
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  4 wangjinhang  staff  136 Jan 30 14:58 [36m..[m[m
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36morigin[m[m
+
+./.git/logs/refs/remotes/origin:
+total 8
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36m..[m[m
+-rw-r--r--  1 wangjinhang  staff  192 Jan 30 14:58 HEAD
+
+./.git/objects:
+total 0
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  13 wangjinhang  staff   442 Jan 30 15:19 [36m..[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m00[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m02[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m05[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m09[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m0c[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m0f[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m11[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m16[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m1b[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m1c[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m24[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m29[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m2a[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m2e[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m34[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m36[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m37[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m3c[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m3e[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m46[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m48[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m4b[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m4c[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m51[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m53[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m57[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m61[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m62[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m66[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m6b[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m6e[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m70[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m72[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m76[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m7d[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m80[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m83[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m86[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m87[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m8a[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m8c[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m93[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m98[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36ma0[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36ma4[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36ma7[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mae[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36maf[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mb1[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mb3[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mb5[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mb6[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mba[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mbb[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mbc[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mbe[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mbf[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mc0[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36mc3[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mc7[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mcd[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36md3[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36md6[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mdb[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mde[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36me3[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36me5[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36me8[m[m
+drwxr-xr-x   5 wangjinhang  staff   170 Jan 30 14:58 [36me9[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36meb[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mf0[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mf1[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mf5[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mf8[m[m
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36mfb[m[m
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36mff[m[m
+drwxr-xr-x   2 wangjinhang  staff    68 Jan 30 14:57 [36minfo[m[m
+drwxr-xr-x   2 wangjinhang  staff    68 Jan 30 14:57 [36mpack[m[m
+
+./.git/objects/00:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   110 Jan 30 14:58 0a050526f24a50c28a5ad8398659ce87cd9a57
+
+./.git/objects/02:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   110 Jan 30 14:58 479cddb4111ff1fa678aead16f9f7eddb634b5
+
+./.git/objects/05:
+total 16
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   130 Jan 30 14:58 2bd803023153400a3b404b5e12bf648f1ffec6
+-r--r--r--   1 wangjinhang  staff   119 Jan 30 14:58 48fbc9feed3ad4c74feda9524099bab3f3fd9b
+
+./.git/objects/09:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   174 Jan 30 14:58 b9e91bfda4136191bdae00db0dac349c5a19b1
+
+./.git/objects/0c:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff    93 Jan 30 14:58 1845ebbba783cbe8958becd7fe53b946d59d85
+
+./.git/objects/0f:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff    85 Jan 30 14:58 1ee003ab114dbb439e75887d6fffe2f421b064
+
+./.git/objects/11:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   101 Jan 30 14:58 7d1822f43d3fc85acb7b0cbab21b223478667d
+
+./.git/objects/16:
+total 16
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   190 Jan 30 14:58 2513657c922f54a94a5adda114fd290df330f8
+-r--r--r--   1 wangjinhang  staff   157 Jan 30 14:58 757e8d2349652d080cdce762c793af066d36cc
+
+./.git/objects/1b:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   110 Jan 30 14:58 73d8cfaec17a5a93339b150e45a494e55e6ade
+
+./.git/objects/1c:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff    92 Jan 30 14:58 775586f46f941261d8072b091b8eb9848f293c
+
+./.git/objects/24:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   123 Jan 30 14:58 2d4fa190796f1b7ddef9bb58b7def291306b6f
+
+./.git/objects/29:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   110 Jan 30 14:58 d78df0c755a5702f076560a5f3bbf60716ecd9
+
+./.git/objects/2a:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   110 Jan 30 14:58 f78b2a1b8307cb314cbbabfeb079d5bb6d5bb6
+
+./.git/objects/2e:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1784 Jan 30 14:58 d55aff3ab52308bf91ff8c18d42fe44f4d6733
+
+./.git/objects/34:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 9983785967b1f3c035d391a6bee92a602902b5
+
+./.git/objects/36:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   149 Jan 30 14:58 de942cc2581d67a56a9123bfaf205ef18aabad
+
+./.git/objects/37:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   110 Jan 30 14:58 c73433b4dfb5ba99590d97344f71ba5ad5e030
+
+./.git/objects/3c:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   168 Jan 30 14:58 93545b3973ac38e6dc99f6364882bfc7d39ffa
+
+./.git/objects/3e:
+total 16
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   166 Jan 30 14:58 5b59bd75c0031068680fdd48621ad987fe2b8e
+-r--r--r--   1 wangjinhang  staff   169 Jan 30 14:58 ff8a16c0c4aeda0d07e8ddac827a7abc731ae7
+
+./.git/objects/46:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 681c948b6a35953f9b95138eb802c99ee12861
+
+./.git/objects/48:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   111 Jan 30 14:58 18ce8c9bf0f5bfac9a01183a92c63bcb5f6f3b
+
+./.git/objects/4b:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1710 Jan 30 14:58 9da770583fd970a3e8189f61cb8e3f7cff746f
+
+./.git/objects/4c:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1776 Jan 30 14:58 b3a6ef083e2ff95442f5b2425e7467e9a54eba
+
+./.git/objects/51:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 b2def149c6ad0e2f017943dfe75710024ed033
+
+./.git/objects/53:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 47a98f8e39a4a96619a6e5d0828aef4237944b
+
+./.git/objects/57:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1794 Jan 30 14:58 ca7b0592211c546af03175af10f7ff9f6e89bf
+
+./.git/objects/61:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1798 Jan 30 14:58 c9e42a8425984449e7da5c4a12a4fbc306e210
+
+./.git/objects/62:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   167 Jan 30 14:58 364218a2508e67c137afd45b2f2289721553b5
+
+./.git/objects/66:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   226 Jan 30 14:58 e57d055a8180137f1152617de6aec7931d5592
+
+./.git/objects/6b:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   149 Jan 30 14:58 1342b2937dfca06c44cef871efaeca90c1e395
+
+./.git/objects/6e:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   190 Jan 30 14:58 d0a0fc482854914d41831e08ef64333478679d
+
+./.git/objects/70:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   149 Jan 30 14:58 2f97a47ee44344c73ffc481efa2e83e0f4a7a7
+
+./.git/objects/72:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 ab1f325b57ac9238eade59891ff5697881dca2
+
+./.git/objects/76:
+total 16
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   199 Jan 30 14:58 65fdc313ed191a8c9a17050ef2223a0039ca65
+-r--r--r--   1 wangjinhang  staff   174 Jan 30 14:58 8fa3f528a3ccd0c86f48404d275cdb027d5e25
+
+./.git/objects/7d:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1786 Jan 30 14:58 027aa8bb8dd9bc994dc08665eeca990326d9cd
+
+./.git/objects/80:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   181 Jan 30 14:58 bce7946686853fafe86604ab03d2d7b1fa91dd
+
+./.git/objects/83:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   131 Jan 30 14:58 16513e7d75acb788d9939a45afd26f8d1aa35b
+
+./.git/objects/86:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   210 Jan 30 14:58 b93d87f48f2811331a79f9ed9da4135cccd5ec
+
+./.git/objects/87:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 b3a184775a2df00eead56f3ec8a34113bfd813
+
+./.git/objects/8a:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 3f16c752f2c423cb5e4d54f3a366ff9b6ac759
+
+./.git/objects/8c:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   110 Jan 30 14:58 e3a038b6a5cd636ba7039a9f84dddee80869d9
+
+./.git/objects/93:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff    92 Jan 30 14:58 f06dfb9218a02d4795a5148b238984367875e9
+
+./.git/objects/98:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   179 Jan 30 14:58 c7c7c11978e4212e31f7aa3b5b4550c3d6ecb1
+
+./.git/objects/a0:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   178 Jan 30 14:58 7abf0adc3d70bc66bd966a4c471050dfd213eb
+
+./.git/objects/a4:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   181 Jan 30 14:58 2ac0741ba3f03e79bcaf7f3b381de18eb65aa3
+
+./.git/objects/a7:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   185 Jan 30 14:58 fb67a15ce2ab594eb48df1228f3b5adec57392
+
+./.git/objects/ae:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 d346946f62234bd9636b8fd9e9761e62a8b883
+
+./.git/objects/af:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   111 Jan 30 14:58 4015e03b7dd296c7f63c36798cb99f81515fc3
+
+./.git/objects/b1:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   273 Jan 30 14:58 4c591cec20ca399f2fe58db6c2a944a4fc7aab
+
+./.git/objects/b3:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1775 Jan 30 14:58 7aab70194c189ef367358c945c3df5fbbc08c2
+
+./.git/objects/b5:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 660f58c499041ab477224bf16e8d0f21f398b2
+
+./.git/objects/b6:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   109 Jan 30 14:58 8dbe848b33f20656b1b8fdb8ede2fdeeaa3acd
+
+./.git/objects/ba:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   110 Jan 30 14:58 d31d870fccd71377e5e6d7c123f0cb80056893
+
+./.git/objects/bb:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   179 Jan 30 14:58 a93ac8cabf56f49c6dd97ccaaa0eb19fe87439
+
+./.git/objects/bc:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1737 Jan 30 14:58 5e689200110ba5e54d27f4cb2a502a41666d50
+
+./.git/objects/be:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   263 Jan 30 14:58 89d0e9b9aaf80b92f74b9982c41a47d905a550
+
+./.git/objects/bf:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   192 Jan 30 14:58 08d0b2b6bd5296de67bb58886af791839513b5
+
+./.git/objects/c0:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   165 Jan 30 14:58 b6f3dd97bef8d3573d7ccc467f7a0b408aa994
+
+./.git/objects/c3:
+total 16
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   149 Jan 30 14:58 8da5bebaaa1add0609bb577fee0feb130c75de
+-r--r--r--   1 wangjinhang  staff   161 Jan 30 14:58 ce6f2ed13eff01253f1f46cbeadfc704f6dad0
+
+./.git/objects/c7:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff    24 Jan 30 14:58 3b9803d4e5585a8cb370e25ecc156503a27ca8
+
+./.git/objects/cd:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   149 Jan 30 14:58 d9a9f74e9e2384b54a0f5967c41d5b899eaf77
+
+./.git/objects/d3:
+total 16
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   194 Jan 30 14:58 8045b704b2073811eb6c5be4b544293f1ddf9c
+-r--r--r--   1 wangjinhang  staff    98 Jan 30 14:58 9fe811676c6858f6ba7667c8456efd4e09b1bb
+
+./.git/objects/d6:
+total 16
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  7710 Jan 30 14:58 a93266f748d606b884f9434ff662fe80b9dc21
+
+./.git/objects/db:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff    80 Jan 30 14:58 2379c5c53764e8954b1d91b14e7c4e6f4fc06a
+
+./.git/objects/de:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   263 Jan 30 14:58 93739a74e35a13b839fa043a30d211ca59b3b7
+
+./.git/objects/e3:
+total 16
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   174 Jan 30 14:58 c132cba9f255af02867a784eeab552063df3fb
+-r--r--r--   1 wangjinhang  staff    52 Jan 30 14:58 f24eefa7d934afb31b96c1303718dc8a84d6dc
+
+./.git/objects/e5:
+total 16
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   149 Jan 30 14:58 8da2bdefa0b4cd04e33435b340057b48353767
+-r--r--r--   1 wangjinhang  staff   157 Jan 30 14:58 fd7e7cf742de5e9176f69bab7e00833285a7f0
+
+./.git/objects/e8:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   179 Jan 30 14:58 d65cd8a0608976d27ed2a21e554f7fbf978ee2
+
+./.git/objects/e9:
+total 24
+drwxr-xr-x   5 wangjinhang  staff   170 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   364 Jan 30 14:58 0a39282e9369b0b0815ec4a44aa8693b72d76b
+-r--r--r--   1 wangjinhang  staff    92 Jan 30 14:58 c2593da4bb83cd36afebe61f037a039dd64bad
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 c30fa57b404972e925b0271ae81249ce684360
+
+./.git/objects/eb:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   175 Jan 30 14:58 7b3cbe44b5b0401bf1a35a6c30c906b072a9d9
+
+./.git/objects/f0:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   163 Jan 30 14:58 96ddbd32986f86e341e6ab0413c0c8ed180a54
+
+./.git/objects/f1:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   185 Jan 30 14:58 34c77a76fbef134e2081077255a5197de71225
+
+./.git/objects/f5:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   148 Jan 30 14:58 8fd97081a44f0f51f40266d5d89272176fd91b
+
+./.git/objects/f8:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff   187 Jan 30 14:58 e031b776d4727d33de1f1000d9c35766fd36f2
+
+./.git/objects/fb:
+total 8
+drwxr-xr-x   3 wangjinhang  staff   102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1728 Jan 30 14:58 50bb92473cfd6badb45bdf618101b965cd327a
+
+./.git/objects/ff:
+total 16
+drwxr-xr-x   4 wangjinhang  staff   136 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+-r--r--r--   1 wangjinhang  staff  1787 Jan 30 14:58 6b99889e9dbac153e844dc0649cc2d939d006f
+-r--r--r--   1 wangjinhang  staff   183 Jan 30 14:58 b4424efae94ae988a58b05f896b73d097b70e1
+
+./.git/objects/info:
+total 0
+drwxr-xr-x   2 wangjinhang  staff    68 Jan 30 14:57 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+
+./.git/objects/pack:
+total 0
+drwxr-xr-x   2 wangjinhang  staff    68 Jan 30 14:57 [36m.[m[m
+drwxr-xr-x  80 wangjinhang  staff  2720 Jan 30 14:58 [36m..[m[m
+
+./.git/refs:
+total 0
+drwxr-xr-x   5 wangjinhang  staff  170 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  13 wangjinhang  staff  442 Jan 30 15:19 [36m..[m[m
+drwxr-xr-x   3 wangjinhang  staff  102 Jan 30 14:58 [36mheads[m[m
+drwxr-xr-x   3 wangjinhang  staff  102 Jan 30 14:58 [36mremotes[m[m
+drwxr-xr-x   2 wangjinhang  staff   68 Jan 30 14:58 [36mtags[m[m
+
+./.git/refs/heads:
+total 8
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  5 wangjinhang  staff  170 Jan 30 14:58 [36m..[m[m
+-rw-r--r--  1 wangjinhang  staff   41 Jan 30 14:58 master
+
+./.git/refs/remotes:
+total 0
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  5 wangjinhang  staff  170 Jan 30 14:58 [36m..[m[m
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36morigin[m[m
+
+./.git/refs/remotes/origin:
+total 8
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  3 wangjinhang  staff  102 Jan 30 14:58 [36m..[m[m
+-rw-r--r--  1 wangjinhang  staff   32 Jan 30 14:58 HEAD
+
+./.git/refs/tags:
+total 0
+drwxr-xr-x  2 wangjinhang  staff   68 Jan 30 14:58 [36m.[m[m
+drwxr-xr-x  5 wangjinhang  staff  170 Jan 30 14:58 [36m..[m[m
+
+./bin:
+total 72
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 21:08 [36m.[m[m
+drwxr-xr-x  11 wangjinhang  staff    374 Feb  2 21:03 [36m..[m[m
+-rw-r--r--@  1 wangjinhang  staff   6148 Jan 30 15:18 .DS_Store
+-rwxr-xr-x   1 wangjinhang  staff  27156 Feb  2 21:08 [31mrshell[m[m
+
+./obj:
+total 64
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 21:08 [36m.[m[m
+drwxr-xr-x  11 wangjinhang  staff    374 Feb  2 21:03 [36m..[m[m
+-rw-r--r--   1 wangjinhang  staff  21888 Feb  2 21:08 main.o
+-rw-r--r--   1 wangjinhang  staff   6884 Feb  2 21:08 rshell.o
+
+./src:
+total 48
+drwxr-xr-x   6 wangjinhang  staff   204 Feb  2 21:08 [36m.[m[m
+drwxr-xr-x  11 wangjinhang  staff   374 Feb  2 21:03 [36m..[m[m
+-rw-r--r--@  1 wangjinhang  staff  6148 Jan 30 15:10 .DS_Store
+-rw-r--r--   1 wangjinhang  staff  5820 Feb  2 21:08 main.cpp
+-rw-r--r--   1 wangjinhang  staff   377 Feb  2 21:08 rshell.cpp
+-rw-r--r--   1 wangjinhang  staff   142 Jan 30 14:58 rshell.h
+
+./tests:
+total 88
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 22:07 [36m.[m[m
+drwxr-xr-x  11 wangjinhang  staff    374 Feb  2 21:03 [36m..[m[m
+-rw-r--r--@  1 wangjinhang  staff   6148 Feb  2 15:36 .DS_Store
+-rw-r--r--   1 wangjinhang  staff  33482 Feb  2 22:07 exec.script
+[rshell]wangjinhang@will-Pro.local$:ls -l -a
+total 80
+drwxr-xr-x  11 wangjinhang  staff    374 Feb  2 21:03 [36m.[m[m
+drwx------+ 37 wangjinhang  staff   1258 Feb  2 22:05 [36m..[m[m
+-rw-r--r--@  1 wangjinhang  staff   8196 Feb  2 21:03 .DS_Store
+drwxr-xr-x  13 wangjinhang  staff    442 Jan 30 15:19 [36m.git[m[m
+-rw-r--r--   1 wangjinhang  staff  18027 Jan 30 14:58 LICENSE
+-rw-r--r--   1 wangjinhang  staff    326 Jan 30 14:58 Makefile
+-rw-r--r--   1 wangjinhang  staff    630 Jan 30 14:58 README.md
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 21:08 [36mbin[m[m
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 21:08 [36mobj[m[m
+drwxr-xr-x   6 wangjinhang  staff    204 Feb  2 21:08 [36msrc[m[m
+drwxr-xr-x   4 wangjinhang  staff    136 Feb  2 22:07 [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls   -afjiw
+ls: illegal option -- j
+usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:ls        -a
+[36m.[m[m         .DS_Store LICENSE   README.md [36mobj[m[m       [36mtests[m[m
+[36m..[m[m        [36m.git[m[m      Makefile  [36mbin[m[m       [36msrc[m[m
+[rshell]wangjinhang@will-Pro.local$:				ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:         ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:				ls         -a
+[36m.[m[m         .DS_Store LICENSE   README.md [36mobj[m[m       [36mtests[m[m
+[36m..[m[m        [36m.git[m[m      Makefile  [36mbin[m[m       [36msrc[m[m
+[rshell]wangjinhang@will-Pro.local$:||
+[rshell]wangjinhang@will-Pro.local$:&&
+[rshell]wangjinhang@will-Pro.local$:||||
+error in execvp: No such file or directory
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:&&&&
+error in execvp: No such file or directory
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:;
+[rshell]wangjinhang@will-Pro.local$:;;;;;
+[rshell]wangjinhang@will-Pro.local$:ls && pwd
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+/Users/wangjinhang/Desktop/rshell
+[rshell]wangjinhang@will-Pro.local$:ls&&pwd
+error in execvp: No such file or directory
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:ls && ajsdofqwijefo
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+error in execvp: No such file or directory
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:asdjfiqo && ls
+error in execvp: No such file or directory
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:ls || asdjofiadjf
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls||adofjiqwe
+error in execvp: No such file or directory
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:ls || pwd
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:asjdfioa || ls
+error in execvp: No such file or directory
+error message: child process abortion
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls;ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls ; ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls;;;;;;;;s ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls;ls;ls;ls;ls;ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:lsl ;ls;
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls;ajdfoij
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+error in execvp: No such file or directory
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:ls ; asjofi           asjdfoi;ls
+error in execvp: No such file or directory
+error message: child process abortion
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls -a;ls
+[36m.[m[m         .DS_Store LICENSE   README.md [36mobj[m[m       [36mtests[m[m
+[36m..[m[m        [36m.git[m[m      Makefile  [36mbin[m[m       [36msrc[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls -a ; ls
+[36m.[m[m         .DS_Store LICENSE   README.md [36mobj[m[m       [36mtests[m[m
+[36m..[m[m        [36m.git[m[m      Makefile  [36mbin[m[m       [36msrc[m[m
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls ; ls -a
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[36m.[m[m         .DS_Store LICENSE   README.md [36mobj[m[m       [36mtests[m[m
+[36m..[m[m        [36m.git[m[m      Makefile  [36mbin[m[m       [36msrc[m[m
+[rshell]wangjinhang@will-Pro.local$:^[[A    ls ; ls -a ;  ;
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[36m.[m[m         .DS_Store LICENSE   README.md [36mobj[m[m       [36mtests[m[m
+[36m..[m[m        [36m.git[m[m      Makefile  [36mbin[m[m       [36msrc[m[m
+[rshell]wangjinhang@will-Pro.local$:ls  #ajsfoijasd          ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls #afjoijasdf          ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls#asdfjoiadjf
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls #sjadofijasdf
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:#
+[rshell]wangjinhang@will-Pro.local$:ls
+LICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:#ls
+[rshell]wangjinhang@will-Pro.local$:ls  pwd
+/Users/wangjinhang/Desktop/rshell
+[rshell]wangjinhang@will-Pro.local$:ls #asdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfi
+asdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiLICENSE   Makefile  README.md [36mbin[m[m       [36mobj[m[m       [36msrc[m[m       [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -  
+error in execvp: File name too long
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:ls -l -l
+total 56
+-rw-r--r--  1 wangjinhang  staff  18027 Jan 30 14:58 LICENSE
+-rw-r--r--  1 wangjinhang  staff    326 Jan 30 14:58 Makefile
+-rw-r--r--  1 wangjinhang  staff    630 Jan 30 14:58 README.md
+drwxr-xr-x  4 wangjinhang  staff    136 Feb  2 21:08 [36mbin[m[m
+drwxr-xr-x  4 wangjinhang  staff    136 Feb  2 21:08 [36mobj[m[m
+drwxr-xr-x  6 wangjinhang  staff    204 Feb  2 21:08 [36msrc[m[m
+drwxr-xr-x  4 wangjinhang  staff    136 Feb  2 22:07 [36mtests[m[m
+[rshell]wangjinhang@will-Pro.local$:ls ls
+ls: ls: No such file or directory
+error message: child process abortion
+[rshell]wangjinhang@will-Pro.local$:ls -r     exit    exit
+wangjinhang@will-Pro~/Desktop/rshell $ exit
+exit
+
+Script done on Mon Feb  2 22:15:12 2015
