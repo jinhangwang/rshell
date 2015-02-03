@@ -117,6 +117,7 @@ void command_handling(const char* cmd){ // handling the command
 void prehandling_command()
 {
     cin.getline(command, MAX_LEN);      // get the command
+    
     int len = (unsigned int)strlen(command);
     
     for(int i = 0; i < len; i++)        // handling the comment signal "#"
@@ -135,6 +136,13 @@ void prehandling_command()
             command[i+2]=' ';
             i=i+2;
         }
+    }
+    for(int i=0; i < len; i++){         // remove all tabs
+        if(command[i] == '\t')
+        for(int j = i; j < len; j++)
+            command[j] = command[j+1];
+        len --;
+        i --;
     }
 }
 
