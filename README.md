@@ -15,16 +15,54 @@ bin/rshell
 ```
 # Provided examples
 ```
+// blank line
 ls
 ls -a
 ls -a -l
+ls -a -l -R
+ls -fjai
+ls       -a
+            ls
+			ls
+			ls      -a
+||
+&&
+||||
+&&&&
+;
+;;;;
+
+ls&&pwd
 ls && pwd
-ls && wrongcommand
-wrongcommand && ls
-ls -a && ls -a -l
-ls || ls
-ls || wrongcommand
-wrongcommand || ls
+ls && adsjofqiej
+ajsfdoi && ls
+
+ls||ajdfoiqew
+ls || pwd
+ls || asjdfiqe
+asdjfoiw || ls
+
 ls;ls
-ls;;;;;;;;;;ls
+ls ; ls
+ls;;;;;;ls
+ls;ls;ls;ls;ls;
+ls;ajsdfi
+asfjo;ls
+ls -a;ls
+ls;ls -a
+ls -a ; ls
+ls ; ls -a
+
+
+ls #ls
+ls#ls
+ls#asjfioa
+#
+#ls
+
+ls #asdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfi
+asdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfi
+
+ls -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l 
+
 ```
