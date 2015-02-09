@@ -4,8 +4,7 @@
 This program implements the basic function of rshell, which contains the acquirement of commands, the method of handling the commands with its' proper arguements , and the logical operations of ```&&```, ```||``` and ```;```.
 
 # How to use
-With the Makefile, the program can be executed by steps below:
-
+for rshell:
 ```
 git clone https://github.com/jinhangwang/rshell.git
 cd rshell
@@ -13,7 +12,17 @@ git checkout hw0
 make
 bin/rshell
 ```
+for ls:
+```
+git clone  http://github.com/yourusername/rshell.git
+cd rshell
+git checkout hw1
+make
+bin/ls
+```
+
 # Provided examples
+for rshell:
 ```
 // blank line
 ls
@@ -64,5 +73,23 @@ ls #asdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijf
 asdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfiasdjfoiajsdfoweqijoijfoasfi
 
 ls -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l 
-
+...
+```
+for ls:
+bin/ls
+bin/ls -a
+bin/ls -l
+bin/ls -R
+bin/ls -al
+bin/ls -aR
+bin/ls -la
+bin/ls -lR
+bin/ls -Ra
+bin/ls -Rl
+bin/ls -alR
+bin/ls -a -l
+bin/ls -a -l -R
+bin/ls -l -a
+bin/li -l -a -R
+...
 ```
