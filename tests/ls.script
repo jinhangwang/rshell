@@ -1,0 +1,2873 @@
+Script started on Sun Feb  8 22:11:23 2015
+wangjinhang@will-Pro~/Desktop/rshell/tests $ cd ..
+wangjinhang@will-Pro~/Desktop/rshell $ make clean
+rm -rf obj bin
+wangjinhang@will-Pro~/Desktop/rshell $ make
+mkdir obj
+g++ -c -o obj/rshell.o src/rshell.cpp
+g++ -c -o obj/main.o src/main.cpp
+mkdir bin
+g++ -o bin/rshell obj/rshell.o obj/main.o
+g++ -c -o obj/ls.o src/ls.cpp
+g++ -o bin/ls obj/ls.o
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls
+[1;40;32mLICENSE[0m   Makefile	  README.md	 [1;40;32mbin[0m       obj	       [1;40;32msrc[0m       [1;40;32mtests[0m     
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -a
+[1;40;32m.[0m         [1;40;32m..[0m        .DS_Store	 [1;40;32m.git[0m      [1;40;32mLICENSE[0m   Makefile	  README.md	 
+[1;40;32mbin[0m       obj	       [1;40;32msrc[0m       [1;40;32mtests[0m     
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -a[Kl
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:34 2015 [1;40;32mLICENSE[0m
+-rw-r--r--    1  wangjinhang staff       18027 Sun Feb  8 16:37:42 2015 Makefile
+-rw-r--r--    1  wangjinhang staff         396 Sun Feb  8 16:43:05 2015 README.md
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 22:11:34 2015 [1;40;32mbin[0m
+-rw-r--r--    1  wangjinhang staff        3420 Sun Feb  8 16:37:42 2015 obj
+drwxr-xr-x    7  wangjinhang staff         238 Sun Feb  8 22:09:07 2015 [1;40;32msrc[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:23 2015 [1;40;32mtests[0m
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -l[KR
+[1;40;32mLICENSE[0m   Makefile	  README.md	 [1;40;32mbin[0m       obj	       [1;40;32msrc[0m       [1;40;32mtests[0m     
+[1;40;32m.git[0m:
+
+[1;40;32mCOMMIT_EDITMSG[0m HEAD	           branches	       config	         description	    
+[1;40;32mhooks[0m          index	          [1;40;32minfo[0m           [1;40;32mlogs[0m           [1;40;32mobjects[0m        
+packed-refs	    [1;40;32mrefs[0m           
+[1;40;32mCOMMIT_EDITMSG[0m:
+
+[1;40;32mhooks[0m:
+applypatch-msg.sample	     
+commit-msg.sample	         post-update.sample	        pre-applypatch.sample	     
+pre-commit.sample	         pre-push.sample	           pre-rebase.sample	         
+prepare-commit-msg.sample	 update.sample	             
+[1;40;32minfo[0m:
+exclude	                   
+[1;40;32mlogs[0m:
+
+HEAD	                      [1;40;32mrefs[0m                      
+[1;40;32mrefs[0m:
+[1;40;32mheads[0m                     
+[1;40;32mremotes[0m                   
+[1;40;32mheads[0m:
+master	                    
+[1;40;32mremotes[0m:
+[1;40;32morigin[0m                    
+[1;40;32morigin[0m:
+
+HEAD	                      
+[1;40;32mobjects[0m:
+[1;40;32m00[0m                        [1;40;32m02[0m                        
+[1;40;32m05[0m                        [1;40;32m07[0m                        [1;40;32m09[0m                        
+[1;40;32m0c[0m                        [1;40;32m0f[0m                        [1;40;32m11[0m                        
+[1;40;32m16[0m                        [1;40;32m1b[0m                        [1;40;32m1c[0m                        
+[1;40;32m24[0m                        [1;40;32m28[0m                        [1;40;32m29[0m                        
+[1;40;32m2a[0m                        [1;40;32m2e[0m                        [1;40;32m30[0m                        
+[1;40;32m34[0m                        [1;40;32m36[0m                        [1;40;32m37[0m                        
+[1;40;32m3c[0m                        [1;40;32m3e[0m                        [1;40;32m42[0m                        
+[1;40;32m46[0m                        [1;40;32m48[0m                        [1;40;32m4b[0m                        
+[1;40;32m4c[0m                        [1;40;32m4d[0m                        [1;40;32m51[0m                        
+[1;40;32m53[0m                        [1;40;32m57[0m                        [1;40;32m61[0m                        
+[1;40;32m62[0m                        [1;40;32m66[0m                        [1;40;32m69[0m                        
+[1;40;32m6b[0m                        [1;40;32m6e[0m                        [1;40;32m70[0m                        
+[1;40;32m72[0m                        [1;40;32m76[0m                        [1;40;32m7d[0m                        
+[1;40;32m80[0m                        [1;40;32m83[0m                        [1;40;32m86[0m                        
+[1;40;32m87[0m                        [1;40;32m89[0m                        [1;40;32m8a[0m                        
+[1;40;32m8b[0m                        [1;40;32m8c[0m                        [1;40;32m93[0m                        
+[1;40;32m98[0m                        [1;40;32ma0[0m                        [1;40;32ma4[0m                        
+[1;40;32ma7[0m                        [1;40;32mad[0m                        [1;40;32mae[0m                        
+[1;40;32maf[0m                        [1;40;32mb1[0m                        [1;40;32mb3[0m                        
+[1;40;32mb5[0m                        [1;40;32mb6[0m                        [1;40;32mba[0m                        
+[1;40;32mbb[0m                        [1;40;32mbc[0m                        [1;40;32mbd[0m                        
+[1;40;32mbe[0m                        [1;40;32mbf[0m                        [1;40;32mc0[0m                        
+[1;40;32mc3[0m                        [1;40;32mc6[0m                        [1;40;32mc7[0m                        
+[1;40;32mcd[0m                        [1;40;32md3[0m                        [1;40;32md6[0m                        
+[1;40;32mdb[0m                        [1;40;32mde[0m                        [1;40;32me3[0m                        
+[1;40;32me5[0m                        [1;40;32me8[0m                        [1;40;32me9[0m                        
+[1;40;32meb[0m                        [1;40;32mf0[0m                        [1;40;32mf1[0m                        
+[1;40;32mf5[0m                        [1;40;32mf8[0m                        [1;40;32mfb[0m                        
+[1;40;32mff[0m                        [1;40;32minfo[0m                      [1;40;32mpack[0m                      
+[1;40;32m00[0m:
+
+0a050526f24a50c28a5ad8398659ce87cd9a57	 21525b0b31fe5e808a6ec26bab995cdeb1dd01	 
+5eac63987a77bf56aa343900a60781bcf6a8b5	 
+[1;40;32m02[0m:
+479cddb4111ff1fa678aead16f9f7eddb634b5	 
+[1;40;32m05[0m:
+
+48fbc9feed3ad4c74feda9524099bab3f3fd9b	 
+[1;40;32m07[0m:
+0271ecebe7967772ede3047f73b8cd49c6b5b9	 
+[1;40;32m09[0m:
+
+b9e91bfda4136191bdae00db0dac349c5a19b1	 
+[1;40;32m0c[0m:
+1845ebbba783cbe8958becd7fe53b946d59d85	 
+[1;40;32m0f[0m:
+
+1ee003ab114dbb439e75887d6fffe2f421b064	 fc0bc3ebde24bbcd6b9b14e02810b994331c8f	 
+[1;40;32m11[0m:
+
+7d1822f43d3fc85acb7b0cbab21b223478667d	 
+[1;40;32m16[0m:
+2513657c922f54a94a5adda114fd290df330f8	 
+757e8d2349652d080cdce762c793af066d36cc	 
+[1;40;32m1b[0m:
+73d8cfaec17a5a93339b150e45a494e55e6ade	 
+[1;40;32m1c[0m:
+
+775586f46f941261d8072b091b8eb9848f293c	 
+[1;40;32m24[0m:
+2d4fa190796f1b7ddef9bb58b7def291306b6f	 
+[1;40;32m28[0m:
+
+b5aab37b1d28beaa959170671ca3b319c7093c	 
+[1;40;32m29[0m:
+d78df0c755a5702f076560a5f3bbf60716ecd9	 
+[1;40;32m2a[0m:
+
+f78b2a1b8307cb314cbbabfeb079d5bb6d5bb6	 
+[1;40;32m2e[0m:
+d55aff3ab52308bf91ff8c18d42fe44f4d6733	 
+[1;40;32m30[0m:
+
+c4b9fc9d6dbe7b9ef7f9ca07ef25fccc82b14b	 
+[1;40;32m34[0m:
+9983785967b1f3c035d391a6bee92a602902b5	 
+[1;40;32m36[0m:
+
+de942cc2581d67a56a9123bfaf205ef18aabad	 
+[1;40;32m37[0m:
+c73433b4dfb5ba99590d97344f71ba5ad5e030	 
+[1;40;32m3c[0m:
+
+93545b3973ac38e6dc99f6364882bfc7d39ffa	 
+[1;40;32m3e[0m:
+5b59bd75c0031068680fdd48621ad987fe2b8e	 
+ff8a16c0c4aeda0d07e8ddac827a7abc731ae7	 
+[1;40;32m42[0m:
+511f1b366e8cc830794378062e7e539229543f	 
+[1;40;32m46[0m:
+
+681c948b6a35953f9b95138eb802c99ee12861	 8bdd96f69cff7f714d65eefebc8cd186b2ea77	 
+[1;40;32m48[0m:
+
+18ce8c9bf0f5bfac9a01183a92c63bcb5f6f3b	 d373def39acd7ebe93c55c662a7c6ba1fa370d	 
+[1;40;32m4b[0m:
+
+9da770583fd970a3e8189f61cb8e3f7cff746f	 
+[1;40;32m4c[0m:
+b3a6ef083e2ff95442f5b2425e7467e9a54eba	 
+[1;40;32m4d[0m:
+
+2e916f1280a0d81d2b034df6010e9433ccf5bf	 
+[1;40;32m51[0m:
+b2def149c6ad0e2f017943dfe75710024ed033	 
+[1;40;32m53[0m:
+
+47a98f8e39a4a96619a6e5d0828aef4237944b	 
+[1;40;32m57[0m:
+ca7b0592211c546af03175af10f7ff9f6e89bf	 
+[1;40;32m61[0m:
+
+c9e42a8425984449e7da5c4a12a4fbc306e210	 
+[1;40;32m62[0m:
+364218a2508e67c137afd45b2f2289721553b5	 
+9bd09a1e340cf94a04135dbbf55cfd2e896039	 
+[1;40;32m66[0m:
+e57d055a8180137f1152617de6aec7931d5592	 
+[1;40;32m69[0m:
+
+fa525dbfd2a5e02b0a3ffa98664a105f22d4d3	 
+[1;40;32m6b[0m:
+1342b2937dfca06c44cef871efaeca90c1e395	 
+[1;40;32m6e[0m:
+
+d0a0fc482854914d41831e08ef64333478679d	 
+[1;40;32m70[0m:
+2f97a47ee44344c73ffc481efa2e83e0f4a7a7	 
+[1;40;32m72[0m:
+
+ab1f325b57ac9238eade59891ff5697881dca2	 
+[1;40;32m76[0m:
+65fdc313ed191a8c9a17050ef2223a0039ca65	 
+8fa3f528a3ccd0c86f48404d275cdb027d5e25	 
+[1;40;32m7d[0m:
+027aa8bb8dd9bc994dc08665eeca990326d9cd	 
+[1;40;32m80[0m:
+
+bce7946686853fafe86604ab03d2d7b1fa91dd	 
+[1;40;32m83[0m:
+16513e7d75acb788d9939a45afd26f8d1aa35b	 
+[1;40;32m86[0m:
+
+b93d87f48f2811331a79f9ed9da4135cccd5ec	 
+[1;40;32m87[0m:
+b3a184775a2df00eead56f3ec8a34113bfd813	 
+[1;40;32m89[0m:
+
+fb94ab86ec218fea8053af467cb9bbc24219cf	 
+[1;40;32m8a[0m:
+3f16c752f2c423cb5e4d54f3a366ff9b6ac759	 
+[1;40;32m8b[0m:
+
+3cd7423ac0824fc5a61440fb3cb08b0451767b	 
+[1;40;32m8c[0m:
+e3a038b6a5cd636ba7039a9f84dddee80869d9	 
+[1;40;32m93[0m:
+
+f06dfb9218a02d4795a5148b238984367875e9	 
+[1;40;32m98[0m:
+c7c7c11978e4212e31f7aa3b5b4550c3d6ecb1	 
+[1;40;32ma0[0m:
+
+7abf0adc3d70bc66bd966a4c471050dfd213eb	 
+[1;40;32ma4[0m:
+2ac0741ba3f03e79bcaf7f3b381de18eb65aa3	 
+[1;40;32ma7[0m:
+
+fb67a15ce2ab594eb48df1228f3b5adec57392	 
+[1;40;32mad[0m:
+c25259d672907b0f4712254f1c3c83a9358177	 
+[1;40;32mae[0m:
+
+d346946f62234bd9636b8fd9e9761e62a8b883	 
+[1;40;32maf[0m:
+4015e03b7dd296c7f63c36798cb99f81515fc3	 
+[1;40;32mb1[0m:
+
+4c591cec20ca399f2fe58db6c2a944a4fc7aab	 
+[1;40;32mb3[0m:
+7aab70194c189ef367358c945c3df5fbbc08c2	 
+[1;40;32mb5[0m:
+
+660f58c499041ab477224bf16e8d0f21f398b2	 
+[1;40;32mb6[0m:
+8dbe848b33f20656b1b8fdb8ede2fdeeaa3acd	 
+[1;40;32mba[0m:
+
+d31d870fccd71377e5e6d7c123f0cb80056893	 
+[1;40;32mbb[0m:
+a93ac8cabf56f49c6dd97ccaaa0eb19fe87439	 
+[1;40;32mbc[0m:
+
+5e689200110ba5e54d27f4cb2a502a41666d50	 e3c55e754a625ec68172ec09970abd90a8f6eb	 
+[1;40;32mbd[0m:
+
+50aff49d9072cb3f45938582549948e710a04b	 
+[1;40;32mbe[0m:
+89d0e9b9aaf80b92f74b9982c41a47d905a550	 
+[1;40;32mbf[0m:
+
+08d0b2b6bd5296de67bb58886af791839513b5	 
+[1;40;32mc0[0m:
+b6f3dd97bef8d3573d7ccc467f7a0b408aa994	 
+[1;40;32mc3[0m:
+
+8da5bebaaa1add0609bb577fee0feb130c75de	 ce6f2ed13eff01253f1f46cbeadfc704f6dad0	 
+[1;40;32mc6[0m:
+
+5691c469c89e162f3182665d30fd2d91a4ddd6	 
+[1;40;32mc7[0m:
+3b9803d4e5585a8cb370e25ecc156503a27ca8	 
+[1;40;32mcd[0m:
+
+d9a9f74e9e2384b54a0f5967c41d5b899eaf77	 
+[1;40;32md3[0m:
+8045b704b2073811eb6c5be4b544293f1ddf9c	 
+9fe811676c6858f6ba7667c8456efd4e09b1bb	 
+[1;40;32md6[0m:
+a93266f748d606b884f9434ff662fe80b9dc21	 
+[1;40;32mdb[0m:
+
+2379c5c53764e8954b1d91b14e7c4e6f4fc06a	 
+[1;40;32mde[0m:
+93739a74e35a13b839fa043a30d211ca59b3b7	 
+[1;40;32me3[0m:
+
+c132cba9f255af02867a784eeab552063df3fb	 f24eefa7d934afb31b96c1303718dc8a84d6dc	 
+[1;40;32me5[0m:
+
+8da2bdefa0b4cd04e33435b340057b48353767	 fd7e7cf742de5e9176f69bab7e00833285a7f0	 
+[1;40;32me8[0m:
+
+d65cd8a0608976d27ed2a21e554f7fbf978ee2	 
+[1;40;32me9[0m:
+0a39282e9369b0b0815ec4a44aa8693b72d76b	 
+c2593da4bb83cd36afebe61f037a039dd64bad	 c30fa57b404972e925b0271ae81249ce684360	 
+[1;40;32meb[0m:
+
+7b3cbe44b5b0401bf1a35a6c30c906b072a9d9	 
+[1;40;32mf0[0m:
+96ddbd32986f86e341e6ab0413c0c8ed180a54	 
+[1;40;32mf1[0m:
+
+34c77a76fbef134e2081077255a5197de71225	 781a83351e3f16b16828eeeb5c9dd1ac850c87	 
+[1;40;32mf5[0m:
+
+8fd97081a44f0f51f40266d5d89272176fd91b	 
+[1;40;32mf8[0m:
+e031b776d4727d33de1f1000d9c35766fd36f2	 
+[1;40;32mfb[0m:
+
+50bb92473cfd6badb45bdf618101b965cd327a	 
+[1;40;32mff[0m:
+6b99889e9dbac153e844dc0649cc2d939d006f	 
+b4424efae94ae988a58b05f896b73d097b70e1	 
+[1;40;32minfo[0m:
+
+[1;40;32mpack[0m:
+
+[1;40;32mrefs[0m:
+[1;40;32mheads[0m                                  
+[1;40;32mremotes[0m                                [1;40;32mtags[0m                                   
+[1;40;32mheads[0m:
+
+master	                                 
+[1;40;32mremotes[0m:
+[1;40;32morigin[0m                                 
+[1;40;32morigin[0m:
+
+HEAD	                                   
+[1;40;32mtags[0m:
+
+[1;40;32mLICENSE[0m:
+ls	                                     
+rshell	                                 
+[1;40;32mbin[0m:
+ls.o	                                   
+main.o	                                 rshell.o	                               
+[1;40;32msrc[0m:
+
+[1;40;31mls.cpp[0m                                 [1;40;31mmain.cpp[0m                               
+[1;40;31mrshell.cpp[0m                             rshell.h	                               
+[1;40;32mtests[0m:
+
+exec.script	                            ls.script	                              
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -R[Kal
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 22:11:34 2015 [1;40;32m.[0m
+drwx------   37  wangjinhang staff        1258 Sun Feb  8 20:34:56 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff        6148 Sun Feb  8 22:09:00 2015 .DS_Store
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m.git[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:34 2015 [1;40;32mLICENSE[0m
+-rw-r--r--    1  wangjinhang staff       18027 Sun Feb  8 16:37:42 2015 Makefile
+-rw-r--r--    1  wangjinhang staff         396 Sun Feb  8 16:43:05 2015 README.md
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 22:11:34 2015 [1;40;32mbin[0m
+-rw-r--r--    1  wangjinhang staff        3420 Sun Feb  8 16:37:42 2015 obj
+drwxr-xr-x    7  wangjinhang staff         238 Sun Feb  8 22:09:07 2015 [1;40;32msrc[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:23 2015 [1;40;32mtests[0m
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -al[K[KaR
+[1;40;32m.[0m         [1;40;32m..[0m        .DS_Store	 [1;40;32m.git[0m      [1;40;32mLICENSE[0m   Makefile	  README.md	 
+[1;40;32mbin[0m       obj	       [1;40;32msrc[0m       [1;40;32mtests[0m     
+[1;40;32m.git[0m:
+[1;40;32m.[0m              [1;40;32m..[0m             
+[1;40;32mCOMMIT_EDITMSG[0m HEAD	           branches	       config	         description	    
+[1;40;32mhooks[0m          index	          [1;40;32minfo[0m           [1;40;32mlogs[0m           [1;40;32mobjects[0m        
+packed-refs	    [1;40;32mrefs[0m           
+[1;40;32mCOMMIT_EDITMSG[0m:
+[1;40;32m.[0m              [1;40;32m..[0m             
+[1;40;32mhooks[0m:
+
+[1;40;32m.[0m                         [1;40;32m..[0m                        applypatch-msg.sample	     
+commit-msg.sample	         post-update.sample	        pre-applypatch.sample	     
+pre-commit.sample	         pre-push.sample	           pre-rebase.sample	         
+prepare-commit-msg.sample	 update.sample	             
+[1;40;32minfo[0m:
+[1;40;32m.[0m                         
+[1;40;32m..[0m                        exclude	                   
+[1;40;32mlogs[0m:
+[1;40;32m.[0m                         
+[1;40;32m..[0m                        HEAD	                      [1;40;32mrefs[0m                      
+[1;40;32mrefs[0m:
+
+[1;40;32m.[0m                         [1;40;32m..[0m                        [1;40;32mheads[0m                     
+[1;40;32mremotes[0m                   
+[1;40;32mheads[0m:
+[1;40;32m.[0m                         [1;40;32m..[0m                        
+master	                    
+[1;40;32mremotes[0m:
+[1;40;32m.[0m                         [1;40;32m..[0m                        
+[1;40;32morigin[0m                    
+[1;40;32morigin[0m:
+[1;40;32m.[0m                         [1;40;32m..[0m                        
+HEAD	                      
+[1;40;32mobjects[0m:
+[1;40;32m.[0m                         [1;40;32m..[0m                        
+[1;40;32m00[0m                        [1;40;32m02[0m                        [1;40;32m05[0m                        
+[1;40;32m07[0m                        [1;40;32m09[0m                        [1;40;32m0c[0m                        
+[1;40;32m0f[0m                        [1;40;32m11[0m                        [1;40;32m16[0m                        
+[1;40;32m1b[0m                        [1;40;32m1c[0m                        [1;40;32m24[0m                        
+[1;40;32m28[0m                        [1;40;32m29[0m                        [1;40;32m2a[0m                        
+[1;40;32m2e[0m                        [1;40;32m30[0m                        [1;40;32m34[0m                        
+[1;40;32m36[0m                        [1;40;32m37[0m                        [1;40;32m3c[0m                        
+[1;40;32m3e[0m                        [1;40;32m42[0m                        [1;40;32m46[0m                        
+[1;40;32m48[0m                        [1;40;32m4b[0m                        [1;40;32m4c[0m                        
+[1;40;32m4d[0m                        [1;40;32m51[0m                        [1;40;32m53[0m                        
+[1;40;32m57[0m                        [1;40;32m61[0m                        [1;40;32m62[0m                        
+[1;40;32m66[0m                        [1;40;32m69[0m                        [1;40;32m6b[0m                        
+[1;40;32m6e[0m                        [1;40;32m70[0m                        [1;40;32m72[0m                        
+[1;40;32m76[0m                        [1;40;32m7d[0m                        [1;40;32m80[0m                        
+[1;40;32m83[0m                        [1;40;32m86[0m                        [1;40;32m87[0m                        
+[1;40;32m89[0m                        [1;40;32m8a[0m                        [1;40;32m8b[0m                        
+[1;40;32m8c[0m                        [1;40;32m93[0m                        [1;40;32m98[0m                        
+[1;40;32ma0[0m                        [1;40;32ma4[0m                        [1;40;32ma7[0m                        
+[1;40;32mad[0m                        [1;40;32mae[0m                        [1;40;32maf[0m                        
+[1;40;32mb1[0m                        [1;40;32mb3[0m                        [1;40;32mb5[0m                        
+[1;40;32mb6[0m                        [1;40;32mba[0m                        [1;40;32mbb[0m                        
+[1;40;32mbc[0m                        [1;40;32mbd[0m                        [1;40;32mbe[0m                        
+[1;40;32mbf[0m                        [1;40;32mc0[0m                        [1;40;32mc3[0m                        
+[1;40;32mc6[0m                        [1;40;32mc7[0m                        [1;40;32mcd[0m                        
+[1;40;32md3[0m                        [1;40;32md6[0m                        [1;40;32mdb[0m                        
+[1;40;32mde[0m                        [1;40;32me3[0m                        [1;40;32me5[0m                        
+[1;40;32me8[0m                        [1;40;32me9[0m                        [1;40;32meb[0m                        
+[1;40;32mf0[0m                        [1;40;32mf1[0m                        [1;40;32mf5[0m                        
+[1;40;32mf8[0m                        [1;40;32mfb[0m                        [1;40;32mff[0m                        
+[1;40;32minfo[0m                      [1;40;32mpack[0m                      
+[1;40;32m00[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+0a050526f24a50c28a5ad8398659ce87cd9a57	 21525b0b31fe5e808a6ec26bab995cdeb1dd01	 
+5eac63987a77bf56aa343900a60781bcf6a8b5	 
+[1;40;32m02[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     479cddb4111ff1fa678aead16f9f7eddb634b5	 
+[1;40;32m05[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+48fbc9feed3ad4c74feda9524099bab3f3fd9b	 
+[1;40;32m07[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     0271ecebe7967772ede3047f73b8cd49c6b5b9	 
+[1;40;32m09[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+b9e91bfda4136191bdae00db0dac349c5a19b1	 
+[1;40;32m0c[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     1845ebbba783cbe8958becd7fe53b946d59d85	 
+[1;40;32m0f[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+1ee003ab114dbb439e75887d6fffe2f421b064	 fc0bc3ebde24bbcd6b9b14e02810b994331c8f	 
+[1;40;32m11[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+7d1822f43d3fc85acb7b0cbab21b223478667d	 
+[1;40;32m16[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     2513657c922f54a94a5adda114fd290df330f8	 
+757e8d2349652d080cdce762c793af066d36cc	 
+[1;40;32m1b[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     73d8cfaec17a5a93339b150e45a494e55e6ade	 
+[1;40;32m1c[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+775586f46f941261d8072b091b8eb9848f293c	 
+[1;40;32m24[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     2d4fa190796f1b7ddef9bb58b7def291306b6f	 
+[1;40;32m28[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+b5aab37b1d28beaa959170671ca3b319c7093c	 
+[1;40;32m29[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     d78df0c755a5702f076560a5f3bbf60716ecd9	 
+[1;40;32m2a[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+f78b2a1b8307cb314cbbabfeb079d5bb6d5bb6	 
+[1;40;32m2e[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     d55aff3ab52308bf91ff8c18d42fe44f4d6733	 
+[1;40;32m30[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+c4b9fc9d6dbe7b9ef7f9ca07ef25fccc82b14b	 
+[1;40;32m34[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     9983785967b1f3c035d391a6bee92a602902b5	 
+[1;40;32m36[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+de942cc2581d67a56a9123bfaf205ef18aabad	 
+[1;40;32m37[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     c73433b4dfb5ba99590d97344f71ba5ad5e030	 
+[1;40;32m3c[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+93545b3973ac38e6dc99f6364882bfc7d39ffa	 
+[1;40;32m3e[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     5b59bd75c0031068680fdd48621ad987fe2b8e	 
+ff8a16c0c4aeda0d07e8ddac827a7abc731ae7	 
+[1;40;32m42[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     511f1b366e8cc830794378062e7e539229543f	 
+[1;40;32m46[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+681c948b6a35953f9b95138eb802c99ee12861	 8bdd96f69cff7f714d65eefebc8cd186b2ea77	 
+[1;40;32m48[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+18ce8c9bf0f5bfac9a01183a92c63bcb5f6f3b	 d373def39acd7ebe93c55c662a7c6ba1fa370d	 
+[1;40;32m4b[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+9da770583fd970a3e8189f61cb8e3f7cff746f	 
+[1;40;32m4c[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     b3a6ef083e2ff95442f5b2425e7467e9a54eba	 
+[1;40;32m4d[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+2e916f1280a0d81d2b034df6010e9433ccf5bf	 
+[1;40;32m51[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     b2def149c6ad0e2f017943dfe75710024ed033	 
+[1;40;32m53[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+47a98f8e39a4a96619a6e5d0828aef4237944b	 
+[1;40;32m57[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     ca7b0592211c546af03175af10f7ff9f6e89bf	 
+[1;40;32m61[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+c9e42a8425984449e7da5c4a12a4fbc306e210	 
+[1;40;32m62[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     364218a2508e67c137afd45b2f2289721553b5	 
+9bd09a1e340cf94a04135dbbf55cfd2e896039	 
+[1;40;32m66[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     e57d055a8180137f1152617de6aec7931d5592	 
+[1;40;32m69[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+fa525dbfd2a5e02b0a3ffa98664a105f22d4d3	 
+[1;40;32m6b[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     1342b2937dfca06c44cef871efaeca90c1e395	 
+[1;40;32m6e[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d0a0fc482854914d41831e08ef64333478679d	 
+[1;40;32m70[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     2f97a47ee44344c73ffc481efa2e83e0f4a7a7	 
+[1;40;32m72[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+ab1f325b57ac9238eade59891ff5697881dca2	 
+[1;40;32m76[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     65fdc313ed191a8c9a17050ef2223a0039ca65	 
+8fa3f528a3ccd0c86f48404d275cdb027d5e25	 
+[1;40;32m7d[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     027aa8bb8dd9bc994dc08665eeca990326d9cd	 
+[1;40;32m80[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+bce7946686853fafe86604ab03d2d7b1fa91dd	 
+[1;40;32m83[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     16513e7d75acb788d9939a45afd26f8d1aa35b	 
+[1;40;32m86[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+b93d87f48f2811331a79f9ed9da4135cccd5ec	 
+[1;40;32m87[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     b3a184775a2df00eead56f3ec8a34113bfd813	 
+[1;40;32m89[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+fb94ab86ec218fea8053af467cb9bbc24219cf	 
+[1;40;32m8a[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     3f16c752f2c423cb5e4d54f3a366ff9b6ac759	 
+[1;40;32m8b[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+3cd7423ac0824fc5a61440fb3cb08b0451767b	 
+[1;40;32m8c[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     e3a038b6a5cd636ba7039a9f84dddee80869d9	 
+[1;40;32m93[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+f06dfb9218a02d4795a5148b238984367875e9	 
+[1;40;32m98[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     c7c7c11978e4212e31f7aa3b5b4550c3d6ecb1	 
+[1;40;32ma0[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+7abf0adc3d70bc66bd966a4c471050dfd213eb	 
+[1;40;32ma4[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     2ac0741ba3f03e79bcaf7f3b381de18eb65aa3	 
+[1;40;32ma7[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+fb67a15ce2ab594eb48df1228f3b5adec57392	 
+[1;40;32mad[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     c25259d672907b0f4712254f1c3c83a9358177	 
+[1;40;32mae[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d346946f62234bd9636b8fd9e9761e62a8b883	 
+[1;40;32maf[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     4015e03b7dd296c7f63c36798cb99f81515fc3	 
+[1;40;32mb1[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+4c591cec20ca399f2fe58db6c2a944a4fc7aab	 
+[1;40;32mb3[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     7aab70194c189ef367358c945c3df5fbbc08c2	 
+[1;40;32mb5[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+660f58c499041ab477224bf16e8d0f21f398b2	 
+[1;40;32mb6[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     8dbe848b33f20656b1b8fdb8ede2fdeeaa3acd	 
+[1;40;32mba[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d31d870fccd71377e5e6d7c123f0cb80056893	 
+[1;40;32mbb[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     a93ac8cabf56f49c6dd97ccaaa0eb19fe87439	 
+[1;40;32mbc[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+5e689200110ba5e54d27f4cb2a502a41666d50	 e3c55e754a625ec68172ec09970abd90a8f6eb	 
+[1;40;32mbd[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+50aff49d9072cb3f45938582549948e710a04b	 
+[1;40;32mbe[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     89d0e9b9aaf80b92f74b9982c41a47d905a550	 
+[1;40;32mbf[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+08d0b2b6bd5296de67bb58886af791839513b5	 
+[1;40;32mc0[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     b6f3dd97bef8d3573d7ccc467f7a0b408aa994	 
+[1;40;32mc3[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+8da5bebaaa1add0609bb577fee0feb130c75de	 ce6f2ed13eff01253f1f46cbeadfc704f6dad0	 
+[1;40;32mc6[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+5691c469c89e162f3182665d30fd2d91a4ddd6	 
+[1;40;32mc7[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     3b9803d4e5585a8cb370e25ecc156503a27ca8	 
+[1;40;32mcd[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d9a9f74e9e2384b54a0f5967c41d5b899eaf77	 
+[1;40;32md3[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     8045b704b2073811eb6c5be4b544293f1ddf9c	 
+9fe811676c6858f6ba7667c8456efd4e09b1bb	 
+[1;40;32md6[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     a93266f748d606b884f9434ff662fe80b9dc21	 
+[1;40;32mdb[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+2379c5c53764e8954b1d91b14e7c4e6f4fc06a	 
+[1;40;32mde[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     93739a74e35a13b839fa043a30d211ca59b3b7	 
+[1;40;32me3[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+c132cba9f255af02867a784eeab552063df3fb	 f24eefa7d934afb31b96c1303718dc8a84d6dc	 
+[1;40;32me5[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+8da2bdefa0b4cd04e33435b340057b48353767	 fd7e7cf742de5e9176f69bab7e00833285a7f0	 
+[1;40;32me8[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d65cd8a0608976d27ed2a21e554f7fbf978ee2	 
+[1;40;32me9[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     0a39282e9369b0b0815ec4a44aa8693b72d76b	 
+c2593da4bb83cd36afebe61f037a039dd64bad	 c30fa57b404972e925b0271ae81249ce684360	 
+[1;40;32meb[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+7b3cbe44b5b0401bf1a35a6c30c906b072a9d9	 
+[1;40;32mf0[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     96ddbd32986f86e341e6ab0413c0c8ed180a54	 
+[1;40;32mf1[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+34c77a76fbef134e2081077255a5197de71225	 781a83351e3f16b16828eeeb5c9dd1ac850c87	 
+[1;40;32mf5[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+8fd97081a44f0f51f40266d5d89272176fd91b	 
+[1;40;32mf8[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     e031b776d4727d33de1f1000d9c35766fd36f2	 
+[1;40;32mfb[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+50bb92473cfd6badb45bdf618101b965cd327a	 
+[1;40;32mff[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     6b99889e9dbac153e844dc0649cc2d939d006f	 
+b4424efae94ae988a58b05f896b73d097b70e1	 
+[1;40;32minfo[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     
+[1;40;32mpack[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     
+[1;40;32mrefs[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     [1;40;32mheads[0m                                  
+[1;40;32mremotes[0m                                [1;40;32mtags[0m                                   
+[1;40;32mheads[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+master	                                 
+[1;40;32mremotes[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     [1;40;32morigin[0m                                 
+[1;40;32morigin[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+HEAD	                                   
+[1;40;32mtags[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     
+[1;40;32mLICENSE[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     ls	                                     
+rshell	                                 
+[1;40;32mbin[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     ls.o	                                   
+main.o	                                 rshell.o	                               
+[1;40;32msrc[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+.DS_Store	                              [1;40;31mls.cpp[0m                                 
+[1;40;31mmain.cpp[0m                               [1;40;31mrshell.cpp[0m                             
+rshell.h	                               
+[1;40;32mtests[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     exec.script	                            
+ls.script	                              
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -aR[K[KlR
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:34 2015 [1;40;32mLICENSE[0m
+-rw-r--r--    1  wangjinhang staff       18027 Sun Feb  8 16:37:42 2015 Makefile
+-rw-r--r--    1  wangjinhang staff         396 Sun Feb  8 16:43:05 2015 README.md
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 22:11:34 2015 [1;40;32mbin[0m
+-rw-r--r--    1  wangjinhang staff        3420 Sun Feb  8 16:37:42 2015 obj
+drwxr-xr-x    7  wangjinhang staff         238 Sun Feb  8 22:09:07 2015 [1;40;32msrc[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:23 2015 [1;40;32mtests[0m
+[1;40;32m.git[0m:
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mCOMMIT_EDITMSG[0m
+-rw-r--r--    1  wangjinhang staff          37 Sun Feb  8 16:48:40 2015 HEAD
+-rw-r--r--    1  wangjinhang staff         311 Sun Feb  8 16:37:42 2015 branches
+-rw-r--r--    1  wangjinhang staff          73 Sun Feb  8 16:37:41 2015 config
+-rw-r--r--    1  wangjinhang staff          23 Sun Feb  8 16:37:42 2015 description
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 16:37:41 2015 [1;40;32mhooks[0m
+-rw-r--r--    1  wangjinhang staff         648 Sun Feb  8 16:48:02 2015 index
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:41 2015 [1;40;32minfo[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mlogs[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32mobjects[0m
+-rw-r--r--    1  wangjinhang staff         204 Sun Feb  8 16:37:42 2015 packed-refs
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32mrefs[0m
+[1;40;32mCOMMIT_EDITMSG[0m:
+[1;40;32mhooks[0m:
+-rwxr-xr-x    1  wangjinhang staff         452 Sun Feb  8 16:37:41 2015 applypatch-msg.sample
+-rwxr-xr-x    1  wangjinhang staff         896 Sun Feb  8 16:37:41 2015 commit-msg.sample
+-rwxr-xr-x    1  wangjinhang staff         189 Sun Feb  8 16:37:41 2015 post-update.sample
+-rwxr-xr-x    1  wangjinhang staff         398 Sun Feb  8 16:37:41 2015 pre-applypatch.sample
+-rwxr-xr-x    1  wangjinhang staff        1642 Sun Feb  8 16:37:41 2015 pre-commit.sample
+-rwxr-xr-x    1  wangjinhang staff        1352 Sun Feb  8 16:37:41 2015 pre-push.sample
+-rwxr-xr-x    1  wangjinhang staff        4951 Sun Feb  8 16:37:41 2015 pre-rebase.sample
+-rwxr-xr-x    1  wangjinhang staff        1239 Sun Feb  8 16:37:41 2015 prepare-commit-msg.sample
+-rwxr-xr-x    1  wangjinhang staff        3611 Sun Feb  8 16:37:41 2015 update.sample
+[1;40;32minfo[0m:
+-rw-r--r--    1  wangjinhang staff         240 Sun Feb  8 16:37:41 2015 exclude
+[1;40;32mlogs[0m:
+-rw-r--r--    1  wangjinhang staff         532 Sun Feb  8 16:48:40 2015 HEAD
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mrefs[0m
+[1;40;32mrefs[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mheads[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mremotes[0m
+[1;40;32mheads[0m:
+-rw-r--r--    1  wangjinhang staff         532 Sun Feb  8 16:48:40 2015 master
+[1;40;32mremotes[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32morigin[0m
+[1;40;32morigin[0m:
+-rw-r--r--    1  wangjinhang staff         192 Sun Feb  8 16:37:42 2015 HEAD
+[1;40;32mobjects[0m:
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:47:52 2015 [1;40;32m00[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m02[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m05[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m07[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m09[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m0c[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m0f[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m11[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m16[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m1b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m1c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m24[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m28[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m29[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m2a[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m2e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:52 2015 [1;40;32m30[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m34[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m36[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m37[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m3c[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m3e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m42[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m46[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:48:40 2015 [1;40;32m48[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m4b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m4c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:38 2015 [1;40;32m4d[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m51[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m53[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m57[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m61[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m62[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m66[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:02 2015 [1;40;32m69[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m6b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m6e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m70[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m72[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m76[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m7d[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m80[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m83[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m86[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m87[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m89[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m8a[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32m8b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m8c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m93[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m98[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma0[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma4[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma7[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mad[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mae[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32maf[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb1[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mba[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbb[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mbc[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbd[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbe[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbf[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc0[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mc3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc7[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mcd[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32md3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32md6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mdb[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mde[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32me3[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32me5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32me8[0m
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32me9[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32meb[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf0[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:47:52 2015 [1;40;32mf1[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf8[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mfb[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mff[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32minfo[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mpack[0m
+[1;40;32m00[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 0a050526f24a50c28a5ad8398659ce87cd9a57
+-r--r--r--    1  wangjinhang staff         130 Sun Feb  8 16:37:42 2015 21525b0b31fe5e808a6ec26bab995cdeb1dd01
+-r--r--r--    1  wangjinhang staff         137 Sun Feb  8 16:47:52 2015 5eac63987a77bf56aa343900a60781bcf6a8b5
+[1;40;32m02[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 479cddb4111ff1fa678aead16f9f7eddb634b5
+[1;40;32m05[0m:
+-r--r--r--    1  wangjinhang staff         119 Sun Feb  8 16:37:42 2015 48fbc9feed3ad4c74feda9524099bab3f3fd9b
+[1;40;32m07[0m:
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 0271ecebe7967772ede3047f73b8cd49c6b5b9
+[1;40;32m09[0m:
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 b9e91bfda4136191bdae00db0dac349c5a19b1
+[1;40;32m0c[0m:
+-r--r--r--    1  wangjinhang staff          93 Sun Feb  8 16:37:42 2015 1845ebbba783cbe8958becd7fe53b946d59d85
+[1;40;32m0f[0m:
+-r--r--r--    1  wangjinhang staff          85 Sun Feb  8 16:37:42 2015 1ee003ab114dbb439e75887d6fffe2f421b064
+-r--r--r--    1  wangjinhang staff        1863 Sun Feb  8 16:37:42 2015 fc0bc3ebde24bbcd6b9b14e02810b994331c8f
+[1;40;32m11[0m:
+-r--r--r--    1  wangjinhang staff         101 Sun Feb  8 16:37:42 2015 7d1822f43d3fc85acb7b0cbab21b223478667d
+[1;40;32m16[0m:
+-r--r--r--    1  wangjinhang staff         190 Sun Feb  8 16:37:42 2015 2513657c922f54a94a5adda114fd290df330f8
+-r--r--r--    1  wangjinhang staff         157 Sun Feb  8 16:37:42 2015 757e8d2349652d080cdce762c793af066d36cc
+[1;40;32m1b[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 73d8cfaec17a5a93339b150e45a494e55e6ade
+[1;40;32m1c[0m:
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 775586f46f941261d8072b091b8eb9848f293c
+[1;40;32m24[0m:
+-r--r--r--    1  wangjinhang staff         123 Sun Feb  8 16:37:42 2015 2d4fa190796f1b7ddef9bb58b7def291306b6f
+[1;40;32m28[0m:
+-r--r--r--    1  wangjinhang staff         173 Sun Feb  8 16:37:42 2015 b5aab37b1d28beaa959170671ca3b319c7093c
+[1;40;32m29[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 d78df0c755a5702f076560a5f3bbf60716ecd9
+[1;40;32m2a[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 f78b2a1b8307cb314cbbabfeb079d5bb6d5bb6
+[1;40;32m2e[0m:
+-r--r--r--    1  wangjinhang staff        1784 Sun Feb  8 16:37:42 2015 d55aff3ab52308bf91ff8c18d42fe44f4d6733
+[1;40;32m30[0m:
+-r--r--r--    1  wangjinhang staff         158 Sun Feb  8 16:47:52 2015 c4b9fc9d6dbe7b9ef7f9ca07ef25fccc82b14b
+[1;40;32m34[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 9983785967b1f3c035d391a6bee92a602902b5
+[1;40;32m36[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 de942cc2581d67a56a9123bfaf205ef18aabad
+[1;40;32m37[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 c73433b4dfb5ba99590d97344f71ba5ad5e030
+[1;40;32m3c[0m:
+-r--r--r--    1  wangjinhang staff         168 Sun Feb  8 16:37:42 2015 93545b3973ac38e6dc99f6364882bfc7d39ffa
+[1;40;32m3e[0m:
+-r--r--r--    1  wangjinhang staff         166 Sun Feb  8 16:37:42 2015 5b59bd75c0031068680fdd48621ad987fe2b8e
+-r--r--r--    1  wangjinhang staff         169 Sun Feb  8 16:37:42 2015 ff8a16c0c4aeda0d07e8ddac827a7abc731ae7
+[1;40;32m42[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 511f1b366e8cc830794378062e7e539229543f
+[1;40;32m46[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 681c948b6a35953f9b95138eb802c99ee12861
+-r--r--r--    1  wangjinhang staff          55 Sun Feb  8 16:37:42 2015 8bdd96f69cff7f714d65eefebc8cd186b2ea77
+[1;40;32m48[0m:
+-r--r--r--    1  wangjinhang staff         111 Sun Feb  8 16:37:42 2015 18ce8c9bf0f5bfac9a01183a92c63bcb5f6f3b
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:48:40 2015 d373def39acd7ebe93c55c662a7c6ba1fa370d
+[1;40;32m4b[0m:
+-r--r--r--    1  wangjinhang staff        1710 Sun Feb  8 16:37:42 2015 9da770583fd970a3e8189f61cb8e3f7cff746f
+[1;40;32m4c[0m:
+-r--r--r--    1  wangjinhang staff        1776 Sun Feb  8 16:37:42 2015 b3a6ef083e2ff95442f5b2425e7467e9a54eba
+[1;40;32m4d[0m:
+-r--r--r--    1  wangjinhang staff        2207 Sun Feb  8 16:47:38 2015 2e916f1280a0d81d2b034df6010e9433ccf5bf
+[1;40;32m51[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 b2def149c6ad0e2f017943dfe75710024ed033
+[1;40;32m53[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 47a98f8e39a4a96619a6e5d0828aef4237944b
+[1;40;32m57[0m:
+-r--r--r--    1  wangjinhang staff        1794 Sun Feb  8 16:37:42 2015 ca7b0592211c546af03175af10f7ff9f6e89bf
+[1;40;32m61[0m:
+-r--r--r--    1  wangjinhang staff        1798 Sun Feb  8 16:37:42 2015 c9e42a8425984449e7da5c4a12a4fbc306e210
+[1;40;32m62[0m:
+-r--r--r--    1  wangjinhang staff         167 Sun Feb  8 16:37:42 2015 364218a2508e67c137afd45b2f2289721553b5
+-r--r--r--    1  wangjinhang staff         534 Sun Feb  8 16:37:42 2015 9bd09a1e340cf94a04135dbbf55cfd2e896039
+[1;40;32m66[0m:
+-r--r--r--    1  wangjinhang staff         226 Sun Feb  8 16:37:42 2015 e57d055a8180137f1152617de6aec7931d5592
+[1;40;32m69[0m:
+-r--r--r--    1  wangjinhang staff         238 Sun Feb  8 16:48:02 2015 fa525dbfd2a5e02b0a3ffa98664a105f22d4d3
+[1;40;32m6b[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 1342b2937dfca06c44cef871efaeca90c1e395
+[1;40;32m6e[0m:
+-r--r--r--    1  wangjinhang staff         190 Sun Feb  8 16:37:42 2015 d0a0fc482854914d41831e08ef64333478679d
+[1;40;32m70[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 2f97a47ee44344c73ffc481efa2e83e0f4a7a7
+[1;40;32m72[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 ab1f325b57ac9238eade59891ff5697881dca2
+[1;40;32m76[0m:
+-r--r--r--    1  wangjinhang staff         199 Sun Feb  8 16:37:42 2015 65fdc313ed191a8c9a17050ef2223a0039ca65
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 8fa3f528a3ccd0c86f48404d275cdb027d5e25
+[1;40;32m7d[0m:
+-r--r--r--    1  wangjinhang staff        1786 Sun Feb  8 16:37:42 2015 027aa8bb8dd9bc994dc08665eeca990326d9cd
+[1;40;32m80[0m:
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 bce7946686853fafe86604ab03d2d7b1fa91dd
+[1;40;32m83[0m:
+-r--r--r--    1  wangjinhang staff         131 Sun Feb  8 16:37:42 2015 16513e7d75acb788d9939a45afd26f8d1aa35b
+[1;40;32m86[0m:
+-r--r--r--    1  wangjinhang staff         210 Sun Feb  8 16:37:42 2015 b93d87f48f2811331a79f9ed9da4135cccd5ec
+[1;40;32m87[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 b3a184775a2df00eead56f3ec8a34113bfd813
+[1;40;32m89[0m:
+-r--r--r--    1  wangjinhang staff         161 Sun Feb  8 16:37:42 2015 fb94ab86ec218fea8053af467cb9bbc24219cf
+[1;40;32m8a[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 3f16c752f2c423cb5e4d54f3a366ff9b6ac759
+[1;40;32m8b[0m:
+-r--r--r--    1  wangjinhang staff         175 Sun Feb  8 16:48:40 2015 3cd7423ac0824fc5a61440fb3cb08b0451767b
+[1;40;32m8c[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 e3a038b6a5cd636ba7039a9f84dddee80869d9
+[1;40;32m93[0m:
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 f06dfb9218a02d4795a5148b238984367875e9
+[1;40;32m98[0m:
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 c7c7c11978e4212e31f7aa3b5b4550c3d6ecb1
+[1;40;32ma0[0m:
+-r--r--r--    1  wangjinhang staff         178 Sun Feb  8 16:37:42 2015 7abf0adc3d70bc66bd966a4c471050dfd213eb
+[1;40;32ma4[0m:
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 2ac0741ba3f03e79bcaf7f3b381de18eb65aa3
+[1;40;32ma7[0m:
+-r--r--r--    1  wangjinhang staff         185 Sun Feb  8 16:37:42 2015 fb67a15ce2ab594eb48df1228f3b5adec57392
+[1;40;32mad[0m:
+-r--r--r--    1  wangjinhang staff        6150 Sun Feb  8 16:37:42 2015 c25259d672907b0f4712254f1c3c83a9358177
+[1;40;32mae[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 d346946f62234bd9636b8fd9e9761e62a8b883
+[1;40;32maf[0m:
+-r--r--r--    1  wangjinhang staff         111 Sun Feb  8 16:37:42 2015 4015e03b7dd296c7f63c36798cb99f81515fc3
+[1;40;32mb1[0m:
+-r--r--r--    1  wangjinhang staff         273 Sun Feb  8 16:37:42 2015 4c591cec20ca399f2fe58db6c2a944a4fc7aab
+[1;40;32mb3[0m:
+-r--r--r--    1  wangjinhang staff        1775 Sun Feb  8 16:37:42 2015 7aab70194c189ef367358c945c3df5fbbc08c2
+[1;40;32mb5[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 660f58c499041ab477224bf16e8d0f21f398b2
+[1;40;32mb6[0m:
+-r--r--r--    1  wangjinhang staff         109 Sun Feb  8 16:37:42 2015 8dbe848b33f20656b1b8fdb8ede2fdeeaa3acd
+[1;40;32mba[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 d31d870fccd71377e5e6d7c123f0cb80056893
+[1;40;32mbb[0m:
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 a93ac8cabf56f49c6dd97ccaaa0eb19fe87439
+[1;40;32mbc[0m:
+-r--r--r--    1  wangjinhang staff        1737 Sun Feb  8 16:37:42 2015 5e689200110ba5e54d27f4cb2a502a41666d50
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 e3c55e754a625ec68172ec09970abd90a8f6eb
+[1;40;32mbd[0m:
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:37:42 2015 50aff49d9072cb3f45938582549948e710a04b
+[1;40;32mbe[0m:
+-r--r--r--    1  wangjinhang staff         263 Sun Feb  8 16:37:42 2015 89d0e9b9aaf80b92f74b9982c41a47d905a550
+[1;40;32mbf[0m:
+-r--r--r--    1  wangjinhang staff         192 Sun Feb  8 16:37:42 2015 08d0b2b6bd5296de67bb58886af791839513b5
+[1;40;32mc0[0m:
+-r--r--r--    1  wangjinhang staff         165 Sun Feb  8 16:37:42 2015 b6f3dd97bef8d3573d7ccc467f7a0b408aa994
+[1;40;32mc3[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 8da5bebaaa1add0609bb577fee0feb130c75de
+-r--r--r--    1  wangjinhang staff         161 Sun Feb  8 16:37:42 2015 ce6f2ed13eff01253f1f46cbeadfc704f6dad0
+[1;40;32mc6[0m:
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:37:42 2015 5691c469c89e162f3182665d30fd2d91a4ddd6
+[1;40;32mc7[0m:
+-r--r--r--    1  wangjinhang staff          24 Sun Feb  8 16:37:42 2015 3b9803d4e5585a8cb370e25ecc156503a27ca8
+[1;40;32mcd[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 d9a9f74e9e2384b54a0f5967c41d5b899eaf77
+[1;40;32md3[0m:
+-r--r--r--    1  wangjinhang staff         194 Sun Feb  8 16:37:42 2015 8045b704b2073811eb6c5be4b544293f1ddf9c
+-r--r--r--    1  wangjinhang staff          98 Sun Feb  8 16:37:42 2015 9fe811676c6858f6ba7667c8456efd4e09b1bb
+[1;40;32md6[0m:
+-r--r--r--    1  wangjinhang staff        7710 Sun Feb  8 16:37:42 2015 a93266f748d606b884f9434ff662fe80b9dc21
+[1;40;32mdb[0m:
+-r--r--r--    1  wangjinhang staff          80 Sun Feb  8 16:37:42 2015 2379c5c53764e8954b1d91b14e7c4e6f4fc06a
+[1;40;32mde[0m:
+-r--r--r--    1  wangjinhang staff         263 Sun Feb  8 16:37:42 2015 93739a74e35a13b839fa043a30d211ca59b3b7
+[1;40;32me3[0m:
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 c132cba9f255af02867a784eeab552063df3fb
+-r--r--r--    1  wangjinhang staff          52 Sun Feb  8 16:37:42 2015 f24eefa7d934afb31b96c1303718dc8a84d6dc
+[1;40;32me5[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 8da2bdefa0b4cd04e33435b340057b48353767
+-r--r--r--    1  wangjinhang staff         157 Sun Feb  8 16:37:42 2015 fd7e7cf742de5e9176f69bab7e00833285a7f0
+[1;40;32me8[0m:
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 d65cd8a0608976d27ed2a21e554f7fbf978ee2
+[1;40;32me9[0m:
+-r--r--r--    1  wangjinhang staff         364 Sun Feb  8 16:37:42 2015 0a39282e9369b0b0815ec4a44aa8693b72d76b
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 c2593da4bb83cd36afebe61f037a039dd64bad
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 c30fa57b404972e925b0271ae81249ce684360
+[1;40;32meb[0m:
+-r--r--r--    1  wangjinhang staff         175 Sun Feb  8 16:37:42 2015 7b3cbe44b5b0401bf1a35a6c30c906b072a9d9
+[1;40;32mf0[0m:
+-r--r--r--    1  wangjinhang staff         163 Sun Feb  8 16:37:42 2015 96ddbd32986f86e341e6ab0413c0c8ed180a54
+[1;40;32mf1[0m:
+-r--r--r--    1  wangjinhang staff         185 Sun Feb  8 16:37:42 2015 34c77a76fbef134e2081077255a5197de71225
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:47:52 2015 781a83351e3f16b16828eeeb5c9dd1ac850c87
+[1;40;32mf5[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 8fd97081a44f0f51f40266d5d89272176fd91b
+[1;40;32mf8[0m:
+-r--r--r--    1  wangjinhang staff         187 Sun Feb  8 16:37:42 2015 e031b776d4727d33de1f1000d9c35766fd36f2
+[1;40;32mfb[0m:
+-r--r--r--    1  wangjinhang staff        1728 Sun Feb  8 16:37:42 2015 50bb92473cfd6badb45bdf618101b965cd327a
+[1;40;32mff[0m:
+-r--r--r--    1  wangjinhang staff        1787 Sun Feb  8 16:37:42 2015 6b99889e9dbac153e844dc0649cc2d939d006f
+-r--r--r--    1  wangjinhang staff         183 Sun Feb  8 16:37:42 2015 b4424efae94ae988a58b05f896b73d097b70e1
+[1;40;32minfo[0m:
+[1;40;32mpack[0m:
+[1;40;32mrefs[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32mheads[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mremotes[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mtags[0m
+[1;40;32mheads[0m:
+-rw-r--r--    1  wangjinhang staff          41 Sun Feb  8 16:48:40 2015 master
+[1;40;32mremotes[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32morigin[0m
+[1;40;32morigin[0m:
+-rw-r--r--    1  wangjinhang staff          32 Sun Feb  8 16:37:42 2015 HEAD
+[1;40;32mtags[0m:
+[1;40;32mLICENSE[0m:
+-rwxr-xr-x    1  wangjinhang staff       20716 Sun Feb  8 22:11:34 2015 ls
+-rwxr-xr-x    1  wangjinhang staff       27156 Sun Feb  8 22:11:34 2015 rshell
+[1;40;32mbin[0m:
+-rw-r--r--    1  wangjinhang staff       16988 Sun Feb  8 22:11:34 2015 ls.o
+-rw-r--r--    1  wangjinhang staff       21888 Sun Feb  8 22:11:34 2015 main.o
+-rw-r--r--    1  wangjinhang staff        6884 Sun Feb  8 22:11:34 2015 rshell.o
+[1;40;32msrc[0m:
+-rw-r--r--    1  wangjinhang staff        7201 Sun Feb  8 22:08:05 2015 [1;40;31mls.cpp[0m
+-rw-r--r--    1  wangjinhang staff        5820 Sun Feb  8 16:37:42 2015 [1;40;31mmain.cpp[0m
+-rw-r--r--    1  wangjinhang staff         377 Sun Feb  8 16:37:42 2015 [1;40;31mrshell.cpp[0m
+-rw-r--r--    1  wangjinhang staff         142 Sun Feb  8 16:37:42 2015 rshell.h
+[1;40;32mtests[0m:
+-rw-r--r--    1  wangjinhang staff       46768 Sun Feb  8 16:37:42 2015 exec.script
+-rw-r--r--    1  wangjinhang staff       63777 Sun Feb  8 22:12:30 2015 ls.script
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -lR[K[Kla
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 22:11:34 2015 [1;40;32m.[0m
+drwx------   37  wangjinhang staff        1258 Sun Feb  8 20:34:56 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff        6148 Sun Feb  8 22:09:00 2015 .DS_Store
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m.git[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:34 2015 [1;40;32mLICENSE[0m
+-rw-r--r--    1  wangjinhang staff       18027 Sun Feb  8 16:37:42 2015 Makefile
+-rw-r--r--    1  wangjinhang staff         396 Sun Feb  8 16:43:05 2015 README.md
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 22:11:34 2015 [1;40;32mbin[0m
+-rw-r--r--    1  wangjinhang staff        3420 Sun Feb  8 16:37:42 2015 obj
+drwxr-xr-x    7  wangjinhang staff         238 Sun Feb  8 22:09:07 2015 [1;40;32msrc[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:23 2015 [1;40;32mtests[0m
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -la[KR
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:34 2015 [1;40;32mLICENSE[0m
+-rw-r--r--    1  wangjinhang staff       18027 Sun Feb  8 16:37:42 2015 Makefile
+-rw-r--r--    1  wangjinhang staff         396 Sun Feb  8 16:43:05 2015 README.md
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 22:11:34 2015 [1;40;32mbin[0m
+-rw-r--r--    1  wangjinhang staff        3420 Sun Feb  8 16:37:42 2015 obj
+drwxr-xr-x    7  wangjinhang staff         238 Sun Feb  8 22:09:07 2015 [1;40;32msrc[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:23 2015 [1;40;32mtests[0m
+[1;40;32m.git[0m:
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mCOMMIT_EDITMSG[0m
+-rw-r--r--    1  wangjinhang staff          37 Sun Feb  8 16:48:40 2015 HEAD
+-rw-r--r--    1  wangjinhang staff         311 Sun Feb  8 16:37:42 2015 branches
+-rw-r--r--    1  wangjinhang staff          73 Sun Feb  8 16:37:41 2015 config
+-rw-r--r--    1  wangjinhang staff          23 Sun Feb  8 16:37:42 2015 description
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 16:37:41 2015 [1;40;32mhooks[0m
+-rw-r--r--    1  wangjinhang staff         648 Sun Feb  8 16:48:02 2015 index
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:41 2015 [1;40;32minfo[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mlogs[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32mobjects[0m
+-rw-r--r--    1  wangjinhang staff         204 Sun Feb  8 16:37:42 2015 packed-refs
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32mrefs[0m
+[1;40;32mCOMMIT_EDITMSG[0m:
+[1;40;32mhooks[0m:
+-rwxr-xr-x    1  wangjinhang staff         452 Sun Feb  8 16:37:41 2015 applypatch-msg.sample
+-rwxr-xr-x    1  wangjinhang staff         896 Sun Feb  8 16:37:41 2015 commit-msg.sample
+-rwxr-xr-x    1  wangjinhang staff         189 Sun Feb  8 16:37:41 2015 post-update.sample
+-rwxr-xr-x    1  wangjinhang staff         398 Sun Feb  8 16:37:41 2015 pre-applypatch.sample
+-rwxr-xr-x    1  wangjinhang staff        1642 Sun Feb  8 16:37:41 2015 pre-commit.sample
+-rwxr-xr-x    1  wangjinhang staff        1352 Sun Feb  8 16:37:41 2015 pre-push.sample
+-rwxr-xr-x    1  wangjinhang staff        4951 Sun Feb  8 16:37:41 2015 pre-rebase.sample
+-rwxr-xr-x    1  wangjinhang staff        1239 Sun Feb  8 16:37:41 2015 prepare-commit-msg.sample
+-rwxr-xr-x    1  wangjinhang staff        3611 Sun Feb  8 16:37:41 2015 update.sample
+[1;40;32minfo[0m:
+-rw-r--r--    1  wangjinhang staff         240 Sun Feb  8 16:37:41 2015 exclude
+[1;40;32mlogs[0m:
+-rw-r--r--    1  wangjinhang staff         532 Sun Feb  8 16:48:40 2015 HEAD
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mrefs[0m
+[1;40;32mrefs[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mheads[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mremotes[0m
+[1;40;32mheads[0m:
+-rw-r--r--    1  wangjinhang staff         532 Sun Feb  8 16:48:40 2015 master
+[1;40;32mremotes[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32morigin[0m
+[1;40;32morigin[0m:
+-rw-r--r--    1  wangjinhang staff         192 Sun Feb  8 16:37:42 2015 HEAD
+[1;40;32mobjects[0m:
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:47:52 2015 [1;40;32m00[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m02[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m05[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m07[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m09[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m0c[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m0f[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m11[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m16[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m1b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m1c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m24[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m28[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m29[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m2a[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m2e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:52 2015 [1;40;32m30[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m34[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m36[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m37[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m3c[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m3e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m42[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m46[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:48:40 2015 [1;40;32m48[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m4b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m4c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:38 2015 [1;40;32m4d[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m51[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m53[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m57[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m61[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m62[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m66[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:02 2015 [1;40;32m69[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m6b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m6e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m70[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m72[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m76[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m7d[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m80[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m83[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m86[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m87[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m89[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m8a[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32m8b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m8c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m93[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m98[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma0[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma4[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma7[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mad[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mae[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32maf[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb1[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mba[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbb[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mbc[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbd[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbe[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbf[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc0[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mc3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc7[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mcd[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32md3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32md6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mdb[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mde[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32me3[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32me5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32me8[0m
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32me9[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32meb[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf0[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:47:52 2015 [1;40;32mf1[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf8[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mfb[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mff[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32minfo[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mpack[0m
+[1;40;32m00[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 0a050526f24a50c28a5ad8398659ce87cd9a57
+-r--r--r--    1  wangjinhang staff         130 Sun Feb  8 16:37:42 2015 21525b0b31fe5e808a6ec26bab995cdeb1dd01
+-r--r--r--    1  wangjinhang staff         137 Sun Feb  8 16:47:52 2015 5eac63987a77bf56aa343900a60781bcf6a8b5
+[1;40;32m02[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 479cddb4111ff1fa678aead16f9f7eddb634b5
+[1;40;32m05[0m:
+-r--r--r--    1  wangjinhang staff         119 Sun Feb  8 16:37:42 2015 48fbc9feed3ad4c74feda9524099bab3f3fd9b
+[1;40;32m07[0m:
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 0271ecebe7967772ede3047f73b8cd49c6b5b9
+[1;40;32m09[0m:
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 b9e91bfda4136191bdae00db0dac349c5a19b1
+[1;40;32m0c[0m:
+-r--r--r--    1  wangjinhang staff          93 Sun Feb  8 16:37:42 2015 1845ebbba783cbe8958becd7fe53b946d59d85
+[1;40;32m0f[0m:
+-r--r--r--    1  wangjinhang staff          85 Sun Feb  8 16:37:42 2015 1ee003ab114dbb439e75887d6fffe2f421b064
+-r--r--r--    1  wangjinhang staff        1863 Sun Feb  8 16:37:42 2015 fc0bc3ebde24bbcd6b9b14e02810b994331c8f
+[1;40;32m11[0m:
+-r--r--r--    1  wangjinhang staff         101 Sun Feb  8 16:37:42 2015 7d1822f43d3fc85acb7b0cbab21b223478667d
+[1;40;32m16[0m:
+-r--r--r--    1  wangjinhang staff         190 Sun Feb  8 16:37:42 2015 2513657c922f54a94a5adda114fd290df330f8
+-r--r--r--    1  wangjinhang staff         157 Sun Feb  8 16:37:42 2015 757e8d2349652d080cdce762c793af066d36cc
+[1;40;32m1b[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 73d8cfaec17a5a93339b150e45a494e55e6ade
+[1;40;32m1c[0m:
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 775586f46f941261d8072b091b8eb9848f293c
+[1;40;32m24[0m:
+-r--r--r--    1  wangjinhang staff         123 Sun Feb  8 16:37:42 2015 2d4fa190796f1b7ddef9bb58b7def291306b6f
+[1;40;32m28[0m:
+-r--r--r--    1  wangjinhang staff         173 Sun Feb  8 16:37:42 2015 b5aab37b1d28beaa959170671ca3b319c7093c
+[1;40;32m29[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 d78df0c755a5702f076560a5f3bbf60716ecd9
+[1;40;32m2a[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 f78b2a1b8307cb314cbbabfeb079d5bb6d5bb6
+[1;40;32m2e[0m:
+-r--r--r--    1  wangjinhang staff        1784 Sun Feb  8 16:37:42 2015 d55aff3ab52308bf91ff8c18d42fe44f4d6733
+[1;40;32m30[0m:
+-r--r--r--    1  wangjinhang staff         158 Sun Feb  8 16:47:52 2015 c4b9fc9d6dbe7b9ef7f9ca07ef25fccc82b14b
+[1;40;32m34[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 9983785967b1f3c035d391a6bee92a602902b5
+[1;40;32m36[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 de942cc2581d67a56a9123bfaf205ef18aabad
+[1;40;32m37[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 c73433b4dfb5ba99590d97344f71ba5ad5e030
+[1;40;32m3c[0m:
+-r--r--r--    1  wangjinhang staff         168 Sun Feb  8 16:37:42 2015 93545b3973ac38e6dc99f6364882bfc7d39ffa
+[1;40;32m3e[0m:
+-r--r--r--    1  wangjinhang staff         166 Sun Feb  8 16:37:42 2015 5b59bd75c0031068680fdd48621ad987fe2b8e
+-r--r--r--    1  wangjinhang staff         169 Sun Feb  8 16:37:42 2015 ff8a16c0c4aeda0d07e8ddac827a7abc731ae7
+[1;40;32m42[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 511f1b366e8cc830794378062e7e539229543f
+[1;40;32m46[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 681c948b6a35953f9b95138eb802c99ee12861
+-r--r--r--    1  wangjinhang staff          55 Sun Feb  8 16:37:42 2015 8bdd96f69cff7f714d65eefebc8cd186b2ea77
+[1;40;32m48[0m:
+-r--r--r--    1  wangjinhang staff         111 Sun Feb  8 16:37:42 2015 18ce8c9bf0f5bfac9a01183a92c63bcb5f6f3b
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:48:40 2015 d373def39acd7ebe93c55c662a7c6ba1fa370d
+[1;40;32m4b[0m:
+-r--r--r--    1  wangjinhang staff        1710 Sun Feb  8 16:37:42 2015 9da770583fd970a3e8189f61cb8e3f7cff746f
+[1;40;32m4c[0m:
+-r--r--r--    1  wangjinhang staff        1776 Sun Feb  8 16:37:42 2015 b3a6ef083e2ff95442f5b2425e7467e9a54eba
+[1;40;32m4d[0m:
+-r--r--r--    1  wangjinhang staff        2207 Sun Feb  8 16:47:38 2015 2e916f1280a0d81d2b034df6010e9433ccf5bf
+[1;40;32m51[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 b2def149c6ad0e2f017943dfe75710024ed033
+[1;40;32m53[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 47a98f8e39a4a96619a6e5d0828aef4237944b
+[1;40;32m57[0m:
+-r--r--r--    1  wangjinhang staff        1794 Sun Feb  8 16:37:42 2015 ca7b0592211c546af03175af10f7ff9f6e89bf
+[1;40;32m61[0m:
+-r--r--r--    1  wangjinhang staff        1798 Sun Feb  8 16:37:42 2015 c9e42a8425984449e7da5c4a12a4fbc306e210
+[1;40;32m62[0m:
+-r--r--r--    1  wangjinhang staff         167 Sun Feb  8 16:37:42 2015 364218a2508e67c137afd45b2f2289721553b5
+-r--r--r--    1  wangjinhang staff         534 Sun Feb  8 16:37:42 2015 9bd09a1e340cf94a04135dbbf55cfd2e896039
+[1;40;32m66[0m:
+-r--r--r--    1  wangjinhang staff         226 Sun Feb  8 16:37:42 2015 e57d055a8180137f1152617de6aec7931d5592
+[1;40;32m69[0m:
+-r--r--r--    1  wangjinhang staff         238 Sun Feb  8 16:48:02 2015 fa525dbfd2a5e02b0a3ffa98664a105f22d4d3
+[1;40;32m6b[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 1342b2937dfca06c44cef871efaeca90c1e395
+[1;40;32m6e[0m:
+-r--r--r--    1  wangjinhang staff         190 Sun Feb  8 16:37:42 2015 d0a0fc482854914d41831e08ef64333478679d
+[1;40;32m70[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 2f97a47ee44344c73ffc481efa2e83e0f4a7a7
+[1;40;32m72[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 ab1f325b57ac9238eade59891ff5697881dca2
+[1;40;32m76[0m:
+-r--r--r--    1  wangjinhang staff         199 Sun Feb  8 16:37:42 2015 65fdc313ed191a8c9a17050ef2223a0039ca65
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 8fa3f528a3ccd0c86f48404d275cdb027d5e25
+[1;40;32m7d[0m:
+-r--r--r--    1  wangjinhang staff        1786 Sun Feb  8 16:37:42 2015 027aa8bb8dd9bc994dc08665eeca990326d9cd
+[1;40;32m80[0m:
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 bce7946686853fafe86604ab03d2d7b1fa91dd
+[1;40;32m83[0m:
+-r--r--r--    1  wangjinhang staff         131 Sun Feb  8 16:37:42 2015 16513e7d75acb788d9939a45afd26f8d1aa35b
+[1;40;32m86[0m:
+-r--r--r--    1  wangjinhang staff         210 Sun Feb  8 16:37:42 2015 b93d87f48f2811331a79f9ed9da4135cccd5ec
+[1;40;32m87[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 b3a184775a2df00eead56f3ec8a34113bfd813
+[1;40;32m89[0m:
+-r--r--r--    1  wangjinhang staff         161 Sun Feb  8 16:37:42 2015 fb94ab86ec218fea8053af467cb9bbc24219cf
+[1;40;32m8a[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 3f16c752f2c423cb5e4d54f3a366ff9b6ac759
+[1;40;32m8b[0m:
+-r--r--r--    1  wangjinhang staff         175 Sun Feb  8 16:48:40 2015 3cd7423ac0824fc5a61440fb3cb08b0451767b
+[1;40;32m8c[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 e3a038b6a5cd636ba7039a9f84dddee80869d9
+[1;40;32m93[0m:
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 f06dfb9218a02d4795a5148b238984367875e9
+[1;40;32m98[0m:
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 c7c7c11978e4212e31f7aa3b5b4550c3d6ecb1
+[1;40;32ma0[0m:
+-r--r--r--    1  wangjinhang staff         178 Sun Feb  8 16:37:42 2015 7abf0adc3d70bc66bd966a4c471050dfd213eb
+[1;40;32ma4[0m:
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 2ac0741ba3f03e79bcaf7f3b381de18eb65aa3
+[1;40;32ma7[0m:
+-r--r--r--    1  wangjinhang staff         185 Sun Feb  8 16:37:42 2015 fb67a15ce2ab594eb48df1228f3b5adec57392
+[1;40;32mad[0m:
+-r--r--r--    1  wangjinhang staff        6150 Sun Feb  8 16:37:42 2015 c25259d672907b0f4712254f1c3c83a9358177
+[1;40;32mae[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 d346946f62234bd9636b8fd9e9761e62a8b883
+[1;40;32maf[0m:
+-r--r--r--    1  wangjinhang staff         111 Sun Feb  8 16:37:42 2015 4015e03b7dd296c7f63c36798cb99f81515fc3
+[1;40;32mb1[0m:
+-r--r--r--    1  wangjinhang staff         273 Sun Feb  8 16:37:42 2015 4c591cec20ca399f2fe58db6c2a944a4fc7aab
+[1;40;32mb3[0m:
+-r--r--r--    1  wangjinhang staff        1775 Sun Feb  8 16:37:42 2015 7aab70194c189ef367358c945c3df5fbbc08c2
+[1;40;32mb5[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 660f58c499041ab477224bf16e8d0f21f398b2
+[1;40;32mb6[0m:
+-r--r--r--    1  wangjinhang staff         109 Sun Feb  8 16:37:42 2015 8dbe848b33f20656b1b8fdb8ede2fdeeaa3acd
+[1;40;32mba[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 d31d870fccd71377e5e6d7c123f0cb80056893
+[1;40;32mbb[0m:
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 a93ac8cabf56f49c6dd97ccaaa0eb19fe87439
+[1;40;32mbc[0m:
+-r--r--r--    1  wangjinhang staff        1737 Sun Feb  8 16:37:42 2015 5e689200110ba5e54d27f4cb2a502a41666d50
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 e3c55e754a625ec68172ec09970abd90a8f6eb
+[1;40;32mbd[0m:
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:37:42 2015 50aff49d9072cb3f45938582549948e710a04b
+[1;40;32mbe[0m:
+-r--r--r--    1  wangjinhang staff         263 Sun Feb  8 16:37:42 2015 89d0e9b9aaf80b92f74b9982c41a47d905a550
+[1;40;32mbf[0m:
+-r--r--r--    1  wangjinhang staff         192 Sun Feb  8 16:37:42 2015 08d0b2b6bd5296de67bb58886af791839513b5
+[1;40;32mc0[0m:
+-r--r--r--    1  wangjinhang staff         165 Sun Feb  8 16:37:42 2015 b6f3dd97bef8d3573d7ccc467f7a0b408aa994
+[1;40;32mc3[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 8da5bebaaa1add0609bb577fee0feb130c75de
+-r--r--r--    1  wangjinhang staff         161 Sun Feb  8 16:37:42 2015 ce6f2ed13eff01253f1f46cbeadfc704f6dad0
+[1;40;32mc6[0m:
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:37:42 2015 5691c469c89e162f3182665d30fd2d91a4ddd6
+[1;40;32mc7[0m:
+-r--r--r--    1  wangjinhang staff          24 Sun Feb  8 16:37:42 2015 3b9803d4e5585a8cb370e25ecc156503a27ca8
+[1;40;32mcd[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 d9a9f74e9e2384b54a0f5967c41d5b899eaf77
+[1;40;32md3[0m:
+-r--r--r--    1  wangjinhang staff         194 Sun Feb  8 16:37:42 2015 8045b704b2073811eb6c5be4b544293f1ddf9c
+-r--r--r--    1  wangjinhang staff          98 Sun Feb  8 16:37:42 2015 9fe811676c6858f6ba7667c8456efd4e09b1bb
+[1;40;32md6[0m:
+-r--r--r--    1  wangjinhang staff        7710 Sun Feb  8 16:37:42 2015 a93266f748d606b884f9434ff662fe80b9dc21
+[1;40;32mdb[0m:
+-r--r--r--    1  wangjinhang staff          80 Sun Feb  8 16:37:42 2015 2379c5c53764e8954b1d91b14e7c4e6f4fc06a
+[1;40;32mde[0m:
+-r--r--r--    1  wangjinhang staff         263 Sun Feb  8 16:37:42 2015 93739a74e35a13b839fa043a30d211ca59b3b7
+[1;40;32me3[0m:
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 c132cba9f255af02867a784eeab552063df3fb
+-r--r--r--    1  wangjinhang staff          52 Sun Feb  8 16:37:42 2015 f24eefa7d934afb31b96c1303718dc8a84d6dc
+[1;40;32me5[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 8da2bdefa0b4cd04e33435b340057b48353767
+-r--r--r--    1  wangjinhang staff         157 Sun Feb  8 16:37:42 2015 fd7e7cf742de5e9176f69bab7e00833285a7f0
+[1;40;32me8[0m:
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 d65cd8a0608976d27ed2a21e554f7fbf978ee2
+[1;40;32me9[0m:
+-r--r--r--    1  wangjinhang staff         364 Sun Feb  8 16:37:42 2015 0a39282e9369b0b0815ec4a44aa8693b72d76b
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 c2593da4bb83cd36afebe61f037a039dd64bad
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 c30fa57b404972e925b0271ae81249ce684360
+[1;40;32meb[0m:
+-r--r--r--    1  wangjinhang staff         175 Sun Feb  8 16:37:42 2015 7b3cbe44b5b0401bf1a35a6c30c906b072a9d9
+[1;40;32mf0[0m:
+-r--r--r--    1  wangjinhang staff         163 Sun Feb  8 16:37:42 2015 96ddbd32986f86e341e6ab0413c0c8ed180a54
+[1;40;32mf1[0m:
+-r--r--r--    1  wangjinhang staff         185 Sun Feb  8 16:37:42 2015 34c77a76fbef134e2081077255a5197de71225
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:47:52 2015 781a83351e3f16b16828eeeb5c9dd1ac850c87
+[1;40;32mf5[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 8fd97081a44f0f51f40266d5d89272176fd91b
+[1;40;32mf8[0m:
+-r--r--r--    1  wangjinhang staff         187 Sun Feb  8 16:37:42 2015 e031b776d4727d33de1f1000d9c35766fd36f2
+[1;40;32mfb[0m:
+-r--r--r--    1  wangjinhang staff        1728 Sun Feb  8 16:37:42 2015 50bb92473cfd6badb45bdf618101b965cd327a
+[1;40;32mff[0m:
+-r--r--r--    1  wangjinhang staff        1787 Sun Feb  8 16:37:42 2015 6b99889e9dbac153e844dc0649cc2d939d006f
+-r--r--r--    1  wangjinhang staff         183 Sun Feb  8 16:37:42 2015 b4424efae94ae988a58b05f896b73d097b70e1
+[1;40;32minfo[0m:
+[1;40;32mpack[0m:
+[1;40;32mrefs[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32mheads[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mremotes[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mtags[0m
+[1;40;32mheads[0m:
+-rw-r--r--    1  wangjinhang staff          41 Sun Feb  8 16:48:40 2015 master
+[1;40;32mremotes[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32morigin[0m
+[1;40;32morigin[0m:
+-rw-r--r--    1  wangjinhang staff          32 Sun Feb  8 16:37:42 2015 HEAD
+[1;40;32mtags[0m:
+[1;40;32mLICENSE[0m:
+-rwxr-xr-x    1  wangjinhang staff       20716 Sun Feb  8 22:11:34 2015 ls
+-rwxr-xr-x    1  wangjinhang staff       27156 Sun Feb  8 22:11:34 2015 rshell
+[1;40;32mbin[0m:
+-rw-r--r--    1  wangjinhang staff       16988 Sun Feb  8 22:11:34 2015 ls.o
+-rw-r--r--    1  wangjinhang staff       21888 Sun Feb  8 22:11:34 2015 main.o
+-rw-r--r--    1  wangjinhang staff        6884 Sun Feb  8 22:11:34 2015 rshell.o
+[1;40;32msrc[0m:
+-rw-r--r--    1  wangjinhang staff        7201 Sun Feb  8 22:08:05 2015 [1;40;31mls.cpp[0m
+-rw-r--r--    1  wangjinhang staff        5820 Sun Feb  8 16:37:42 2015 [1;40;31mmain.cpp[0m
+-rw-r--r--    1  wangjinhang staff         377 Sun Feb  8 16:37:42 2015 [1;40;31mrshell.cpp[0m
+-rw-r--r--    1  wangjinhang staff         142 Sun Feb  8 16:37:42 2015 rshell.h
+[1;40;32mtests[0m:
+-rw-r--r--    1  wangjinhang staff       46768 Sun Feb  8 16:37:42 2015 exec.script
+-rw-r--r--    1  wangjinhang staff       88353 Sun Feb  8 22:12:40 2015 ls.script
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -lR[K[KRa
+[1;40;32m.[0m         [1;40;32m..[0m        .DS_Store	 [1;40;32m.git[0m      [1;40;32mLICENSE[0m   Makefile	  README.md	 
+[1;40;32mbin[0m       obj	       [1;40;32msrc[0m       [1;40;32mtests[0m     
+[1;40;32m.git[0m:
+[1;40;32m.[0m              [1;40;32m..[0m             
+[1;40;32mCOMMIT_EDITMSG[0m HEAD	           branches	       config	         description	    
+[1;40;32mhooks[0m          index	          [1;40;32minfo[0m           [1;40;32mlogs[0m           [1;40;32mobjects[0m        
+packed-refs	    [1;40;32mrefs[0m           
+[1;40;32mCOMMIT_EDITMSG[0m:
+[1;40;32m.[0m              [1;40;32m..[0m             
+[1;40;32mhooks[0m:
+
+[1;40;32m.[0m                         [1;40;32m..[0m                        applypatch-msg.sample	     
+commit-msg.sample	         post-update.sample	        pre-applypatch.sample	     
+pre-commit.sample	         pre-push.sample	           pre-rebase.sample	         
+prepare-commit-msg.sample	 update.sample	             
+[1;40;32minfo[0m:
+[1;40;32m.[0m                         
+[1;40;32m..[0m                        exclude	                   
+[1;40;32mlogs[0m:
+[1;40;32m.[0m                         
+[1;40;32m..[0m                        HEAD	                      [1;40;32mrefs[0m                      
+[1;40;32mrefs[0m:
+
+[1;40;32m.[0m                         [1;40;32m..[0m                        [1;40;32mheads[0m                     
+[1;40;32mremotes[0m                   
+[1;40;32mheads[0m:
+[1;40;32m.[0m                         [1;40;32m..[0m                        
+master	                    
+[1;40;32mremotes[0m:
+[1;40;32m.[0m                         [1;40;32m..[0m                        
+[1;40;32morigin[0m                    
+[1;40;32morigin[0m:
+[1;40;32m.[0m                         [1;40;32m..[0m                        
+HEAD	                      
+[1;40;32mobjects[0m:
+[1;40;32m.[0m                         [1;40;32m..[0m                        
+[1;40;32m00[0m                        [1;40;32m02[0m                        [1;40;32m05[0m                        
+[1;40;32m07[0m                        [1;40;32m09[0m                        [1;40;32m0c[0m                        
+[1;40;32m0f[0m                        [1;40;32m11[0m                        [1;40;32m16[0m                        
+[1;40;32m1b[0m                        [1;40;32m1c[0m                        [1;40;32m24[0m                        
+[1;40;32m28[0m                        [1;40;32m29[0m                        [1;40;32m2a[0m                        
+[1;40;32m2e[0m                        [1;40;32m30[0m                        [1;40;32m34[0m                        
+[1;40;32m36[0m                        [1;40;32m37[0m                        [1;40;32m3c[0m                        
+[1;40;32m3e[0m                        [1;40;32m42[0m                        [1;40;32m46[0m                        
+[1;40;32m48[0m                        [1;40;32m4b[0m                        [1;40;32m4c[0m                        
+[1;40;32m4d[0m                        [1;40;32m51[0m                        [1;40;32m53[0m                        
+[1;40;32m57[0m                        [1;40;32m61[0m                        [1;40;32m62[0m                        
+[1;40;32m66[0m                        [1;40;32m69[0m                        [1;40;32m6b[0m                        
+[1;40;32m6e[0m                        [1;40;32m70[0m                        [1;40;32m72[0m                        
+[1;40;32m76[0m                        [1;40;32m7d[0m                        [1;40;32m80[0m                        
+[1;40;32m83[0m                        [1;40;32m86[0m                        [1;40;32m87[0m                        
+[1;40;32m89[0m                        [1;40;32m8a[0m                        [1;40;32m8b[0m                        
+[1;40;32m8c[0m                        [1;40;32m93[0m                        [1;40;32m98[0m                        
+[1;40;32ma0[0m                        [1;40;32ma4[0m                        [1;40;32ma7[0m                        
+[1;40;32mad[0m                        [1;40;32mae[0m                        [1;40;32maf[0m                        
+[1;40;32mb1[0m                        [1;40;32mb3[0m                        [1;40;32mb5[0m                        
+[1;40;32mb6[0m                        [1;40;32mba[0m                        [1;40;32mbb[0m                        
+[1;40;32mbc[0m                        [1;40;32mbd[0m                        [1;40;32mbe[0m                        
+[1;40;32mbf[0m                        [1;40;32mc0[0m                        [1;40;32mc3[0m                        
+[1;40;32mc6[0m                        [1;40;32mc7[0m                        [1;40;32mcd[0m                        
+[1;40;32md3[0m                        [1;40;32md6[0m                        [1;40;32mdb[0m                        
+[1;40;32mde[0m                        [1;40;32me3[0m                        [1;40;32me5[0m                        
+[1;40;32me8[0m                        [1;40;32me9[0m                        [1;40;32meb[0m                        
+[1;40;32mf0[0m                        [1;40;32mf1[0m                        [1;40;32mf5[0m                        
+[1;40;32mf8[0m                        [1;40;32mfb[0m                        [1;40;32mff[0m                        
+[1;40;32minfo[0m                      [1;40;32mpack[0m                      
+[1;40;32m00[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+0a050526f24a50c28a5ad8398659ce87cd9a57	 21525b0b31fe5e808a6ec26bab995cdeb1dd01	 
+5eac63987a77bf56aa343900a60781bcf6a8b5	 
+[1;40;32m02[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     479cddb4111ff1fa678aead16f9f7eddb634b5	 
+[1;40;32m05[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+48fbc9feed3ad4c74feda9524099bab3f3fd9b	 
+[1;40;32m07[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     0271ecebe7967772ede3047f73b8cd49c6b5b9	 
+[1;40;32m09[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+b9e91bfda4136191bdae00db0dac349c5a19b1	 
+[1;40;32m0c[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     1845ebbba783cbe8958becd7fe53b946d59d85	 
+[1;40;32m0f[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+1ee003ab114dbb439e75887d6fffe2f421b064	 fc0bc3ebde24bbcd6b9b14e02810b994331c8f	 
+[1;40;32m11[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+7d1822f43d3fc85acb7b0cbab21b223478667d	 
+[1;40;32m16[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     2513657c922f54a94a5adda114fd290df330f8	 
+757e8d2349652d080cdce762c793af066d36cc	 
+[1;40;32m1b[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     73d8cfaec17a5a93339b150e45a494e55e6ade	 
+[1;40;32m1c[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+775586f46f941261d8072b091b8eb9848f293c	 
+[1;40;32m24[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     2d4fa190796f1b7ddef9bb58b7def291306b6f	 
+[1;40;32m28[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+b5aab37b1d28beaa959170671ca3b319c7093c	 
+[1;40;32m29[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     d78df0c755a5702f076560a5f3bbf60716ecd9	 
+[1;40;32m2a[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+f78b2a1b8307cb314cbbabfeb079d5bb6d5bb6	 
+[1;40;32m2e[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     d55aff3ab52308bf91ff8c18d42fe44f4d6733	 
+[1;40;32m30[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+c4b9fc9d6dbe7b9ef7f9ca07ef25fccc82b14b	 
+[1;40;32m34[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     9983785967b1f3c035d391a6bee92a602902b5	 
+[1;40;32m36[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+de942cc2581d67a56a9123bfaf205ef18aabad	 
+[1;40;32m37[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     c73433b4dfb5ba99590d97344f71ba5ad5e030	 
+[1;40;32m3c[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+93545b3973ac38e6dc99f6364882bfc7d39ffa	 
+[1;40;32m3e[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     5b59bd75c0031068680fdd48621ad987fe2b8e	 
+ff8a16c0c4aeda0d07e8ddac827a7abc731ae7	 
+[1;40;32m42[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     511f1b366e8cc830794378062e7e539229543f	 
+[1;40;32m46[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+681c948b6a35953f9b95138eb802c99ee12861	 8bdd96f69cff7f714d65eefebc8cd186b2ea77	 
+[1;40;32m48[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+18ce8c9bf0f5bfac9a01183a92c63bcb5f6f3b	 d373def39acd7ebe93c55c662a7c6ba1fa370d	 
+[1;40;32m4b[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+9da770583fd970a3e8189f61cb8e3f7cff746f	 
+[1;40;32m4c[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     b3a6ef083e2ff95442f5b2425e7467e9a54eba	 
+[1;40;32m4d[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+2e916f1280a0d81d2b034df6010e9433ccf5bf	 
+[1;40;32m51[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     b2def149c6ad0e2f017943dfe75710024ed033	 
+[1;40;32m53[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+47a98f8e39a4a96619a6e5d0828aef4237944b	 
+[1;40;32m57[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     ca7b0592211c546af03175af10f7ff9f6e89bf	 
+[1;40;32m61[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+c9e42a8425984449e7da5c4a12a4fbc306e210	 
+[1;40;32m62[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     364218a2508e67c137afd45b2f2289721553b5	 
+9bd09a1e340cf94a04135dbbf55cfd2e896039	 
+[1;40;32m66[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     e57d055a8180137f1152617de6aec7931d5592	 
+[1;40;32m69[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+fa525dbfd2a5e02b0a3ffa98664a105f22d4d3	 
+[1;40;32m6b[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     1342b2937dfca06c44cef871efaeca90c1e395	 
+[1;40;32m6e[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d0a0fc482854914d41831e08ef64333478679d	 
+[1;40;32m70[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     2f97a47ee44344c73ffc481efa2e83e0f4a7a7	 
+[1;40;32m72[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+ab1f325b57ac9238eade59891ff5697881dca2	 
+[1;40;32m76[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     65fdc313ed191a8c9a17050ef2223a0039ca65	 
+8fa3f528a3ccd0c86f48404d275cdb027d5e25	 
+[1;40;32m7d[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     027aa8bb8dd9bc994dc08665eeca990326d9cd	 
+[1;40;32m80[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+bce7946686853fafe86604ab03d2d7b1fa91dd	 
+[1;40;32m83[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     16513e7d75acb788d9939a45afd26f8d1aa35b	 
+[1;40;32m86[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+b93d87f48f2811331a79f9ed9da4135cccd5ec	 
+[1;40;32m87[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     b3a184775a2df00eead56f3ec8a34113bfd813	 
+[1;40;32m89[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+fb94ab86ec218fea8053af467cb9bbc24219cf	 
+[1;40;32m8a[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     3f16c752f2c423cb5e4d54f3a366ff9b6ac759	 
+[1;40;32m8b[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+3cd7423ac0824fc5a61440fb3cb08b0451767b	 
+[1;40;32m8c[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     e3a038b6a5cd636ba7039a9f84dddee80869d9	 
+[1;40;32m93[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+f06dfb9218a02d4795a5148b238984367875e9	 
+[1;40;32m98[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     c7c7c11978e4212e31f7aa3b5b4550c3d6ecb1	 
+[1;40;32ma0[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+7abf0adc3d70bc66bd966a4c471050dfd213eb	 
+[1;40;32ma4[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     2ac0741ba3f03e79bcaf7f3b381de18eb65aa3	 
+[1;40;32ma7[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+fb67a15ce2ab594eb48df1228f3b5adec57392	 
+[1;40;32mad[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     c25259d672907b0f4712254f1c3c83a9358177	 
+[1;40;32mae[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d346946f62234bd9636b8fd9e9761e62a8b883	 
+[1;40;32maf[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     4015e03b7dd296c7f63c36798cb99f81515fc3	 
+[1;40;32mb1[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+4c591cec20ca399f2fe58db6c2a944a4fc7aab	 
+[1;40;32mb3[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     7aab70194c189ef367358c945c3df5fbbc08c2	 
+[1;40;32mb5[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+660f58c499041ab477224bf16e8d0f21f398b2	 
+[1;40;32mb6[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     8dbe848b33f20656b1b8fdb8ede2fdeeaa3acd	 
+[1;40;32mba[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d31d870fccd71377e5e6d7c123f0cb80056893	 
+[1;40;32mbb[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     a93ac8cabf56f49c6dd97ccaaa0eb19fe87439	 
+[1;40;32mbc[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+5e689200110ba5e54d27f4cb2a502a41666d50	 e3c55e754a625ec68172ec09970abd90a8f6eb	 
+[1;40;32mbd[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+50aff49d9072cb3f45938582549948e710a04b	 
+[1;40;32mbe[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     89d0e9b9aaf80b92f74b9982c41a47d905a550	 
+[1;40;32mbf[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+08d0b2b6bd5296de67bb58886af791839513b5	 
+[1;40;32mc0[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     b6f3dd97bef8d3573d7ccc467f7a0b408aa994	 
+[1;40;32mc3[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+8da5bebaaa1add0609bb577fee0feb130c75de	 ce6f2ed13eff01253f1f46cbeadfc704f6dad0	 
+[1;40;32mc6[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+5691c469c89e162f3182665d30fd2d91a4ddd6	 
+[1;40;32mc7[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     3b9803d4e5585a8cb370e25ecc156503a27ca8	 
+[1;40;32mcd[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d9a9f74e9e2384b54a0f5967c41d5b899eaf77	 
+[1;40;32md3[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     8045b704b2073811eb6c5be4b544293f1ddf9c	 
+9fe811676c6858f6ba7667c8456efd4e09b1bb	 
+[1;40;32md6[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     a93266f748d606b884f9434ff662fe80b9dc21	 
+[1;40;32mdb[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+2379c5c53764e8954b1d91b14e7c4e6f4fc06a	 
+[1;40;32mde[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     93739a74e35a13b839fa043a30d211ca59b3b7	 
+[1;40;32me3[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+c132cba9f255af02867a784eeab552063df3fb	 f24eefa7d934afb31b96c1303718dc8a84d6dc	 
+[1;40;32me5[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+8da2bdefa0b4cd04e33435b340057b48353767	 fd7e7cf742de5e9176f69bab7e00833285a7f0	 
+[1;40;32me8[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+d65cd8a0608976d27ed2a21e554f7fbf978ee2	 
+[1;40;32me9[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     0a39282e9369b0b0815ec4a44aa8693b72d76b	 
+c2593da4bb83cd36afebe61f037a039dd64bad	 c30fa57b404972e925b0271ae81249ce684360	 
+[1;40;32meb[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+7b3cbe44b5b0401bf1a35a6c30c906b072a9d9	 
+[1;40;32mf0[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     96ddbd32986f86e341e6ab0413c0c8ed180a54	 
+[1;40;32mf1[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+34c77a76fbef134e2081077255a5197de71225	 781a83351e3f16b16828eeeb5c9dd1ac850c87	 
+[1;40;32mf5[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+8fd97081a44f0f51f40266d5d89272176fd91b	 
+[1;40;32mf8[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     e031b776d4727d33de1f1000d9c35766fd36f2	 
+[1;40;32mfb[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+50bb92473cfd6badb45bdf618101b965cd327a	 
+[1;40;32mff[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     6b99889e9dbac153e844dc0649cc2d939d006f	 
+b4424efae94ae988a58b05f896b73d097b70e1	 
+[1;40;32minfo[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     
+[1;40;32mpack[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     
+[1;40;32mrefs[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     [1;40;32mheads[0m                                  
+[1;40;32mremotes[0m                                [1;40;32mtags[0m                                   
+[1;40;32mheads[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+master	                                 
+[1;40;32mremotes[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     [1;40;32morigin[0m                                 
+[1;40;32morigin[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+HEAD	                                   
+[1;40;32mtags[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     
+[1;40;32mLICENSE[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     ls	                                     
+rshell	                                 
+[1;40;32mbin[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     ls.o	                                   
+main.o	                                 rshell.o	                               
+[1;40;32msrc[0m:
+
+[1;40;32m.[0m                                      [1;40;32m..[0m                                     
+.DS_Store	                              [1;40;31mls.cpp[0m                                 
+[1;40;31mmain.cpp[0m                               [1;40;31mrshell.cpp[0m                             
+rshell.h	                               
+[1;40;32mtests[0m:
+[1;40;32m.[0m                                      
+[1;40;32m..[0m                                     exec.script	                            
+ls.script	                              
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -Ra[Kl
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:34 2015 [1;40;32mLICENSE[0m
+-rw-r--r--    1  wangjinhang staff       18027 Sun Feb  8 16:37:42 2015 Makefile
+-rw-r--r--    1  wangjinhang staff         396 Sun Feb  8 16:43:05 2015 README.md
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 22:11:34 2015 [1;40;32mbin[0m
+-rw-r--r--    1  wangjinhang staff        3420 Sun Feb  8 16:37:42 2015 obj
+drwxr-xr-x    7  wangjinhang staff         238 Sun Feb  8 22:09:07 2015 [1;40;32msrc[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:23 2015 [1;40;32mtests[0m
+[1;40;32m.git[0m:
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mCOMMIT_EDITMSG[0m
+-rw-r--r--    1  wangjinhang staff          37 Sun Feb  8 16:48:40 2015 HEAD
+-rw-r--r--    1  wangjinhang staff         311 Sun Feb  8 16:37:42 2015 branches
+-rw-r--r--    1  wangjinhang staff          73 Sun Feb  8 16:37:41 2015 config
+-rw-r--r--    1  wangjinhang staff          23 Sun Feb  8 16:37:42 2015 description
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 16:37:41 2015 [1;40;32mhooks[0m
+-rw-r--r--    1  wangjinhang staff         648 Sun Feb  8 16:48:02 2015 index
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:41 2015 [1;40;32minfo[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mlogs[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32mobjects[0m
+-rw-r--r--    1  wangjinhang staff         204 Sun Feb  8 16:37:42 2015 packed-refs
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32mrefs[0m
+[1;40;32mCOMMIT_EDITMSG[0m:
+[1;40;32mhooks[0m:
+-rwxr-xr-x    1  wangjinhang staff         452 Sun Feb  8 16:37:41 2015 applypatch-msg.sample
+-rwxr-xr-x    1  wangjinhang staff         896 Sun Feb  8 16:37:41 2015 commit-msg.sample
+-rwxr-xr-x    1  wangjinhang staff         189 Sun Feb  8 16:37:41 2015 post-update.sample
+-rwxr-xr-x    1  wangjinhang staff         398 Sun Feb  8 16:37:41 2015 pre-applypatch.sample
+-rwxr-xr-x    1  wangjinhang staff        1642 Sun Feb  8 16:37:41 2015 pre-commit.sample
+-rwxr-xr-x    1  wangjinhang staff        1352 Sun Feb  8 16:37:41 2015 pre-push.sample
+-rwxr-xr-x    1  wangjinhang staff        4951 Sun Feb  8 16:37:41 2015 pre-rebase.sample
+-rwxr-xr-x    1  wangjinhang staff        1239 Sun Feb  8 16:37:41 2015 prepare-commit-msg.sample
+-rwxr-xr-x    1  wangjinhang staff        3611 Sun Feb  8 16:37:41 2015 update.sample
+[1;40;32minfo[0m:
+-rw-r--r--    1  wangjinhang staff         240 Sun Feb  8 16:37:41 2015 exclude
+[1;40;32mlogs[0m:
+-rw-r--r--    1  wangjinhang staff         532 Sun Feb  8 16:48:40 2015 HEAD
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mrefs[0m
+[1;40;32mrefs[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mheads[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mremotes[0m
+[1;40;32mheads[0m:
+-rw-r--r--    1  wangjinhang staff         532 Sun Feb  8 16:48:40 2015 master
+[1;40;32mremotes[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32morigin[0m
+[1;40;32morigin[0m:
+-rw-r--r--    1  wangjinhang staff         192 Sun Feb  8 16:37:42 2015 HEAD
+[1;40;32mobjects[0m:
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:47:52 2015 [1;40;32m00[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m02[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m05[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m07[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m09[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m0c[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m0f[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m11[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m16[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m1b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m1c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m24[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m28[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m29[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m2a[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m2e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:52 2015 [1;40;32m30[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m34[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m36[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m37[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m3c[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m3e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m42[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m46[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:48:40 2015 [1;40;32m48[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m4b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m4c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:38 2015 [1;40;32m4d[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m51[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m53[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m57[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m61[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m62[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m66[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:02 2015 [1;40;32m69[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m6b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m6e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m70[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m72[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m76[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m7d[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m80[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m83[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m86[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m87[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m89[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m8a[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32m8b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m8c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m93[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m98[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma0[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma4[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma7[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mad[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mae[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32maf[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb1[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mba[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbb[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mbc[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbd[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbe[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbf[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc0[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mc3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc7[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mcd[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32md3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32md6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mdb[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mde[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32me3[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32me5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32me8[0m
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32me9[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32meb[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf0[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:47:52 2015 [1;40;32mf1[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf8[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mfb[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mff[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32minfo[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mpack[0m
+[1;40;32m00[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 0a050526f24a50c28a5ad8398659ce87cd9a57
+-r--r--r--    1  wangjinhang staff         130 Sun Feb  8 16:37:42 2015 21525b0b31fe5e808a6ec26bab995cdeb1dd01
+-r--r--r--    1  wangjinhang staff         137 Sun Feb  8 16:47:52 2015 5eac63987a77bf56aa343900a60781bcf6a8b5
+[1;40;32m02[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 479cddb4111ff1fa678aead16f9f7eddb634b5
+[1;40;32m05[0m:
+-r--r--r--    1  wangjinhang staff         119 Sun Feb  8 16:37:42 2015 48fbc9feed3ad4c74feda9524099bab3f3fd9b
+[1;40;32m07[0m:
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 0271ecebe7967772ede3047f73b8cd49c6b5b9
+[1;40;32m09[0m:
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 b9e91bfda4136191bdae00db0dac349c5a19b1
+[1;40;32m0c[0m:
+-r--r--r--    1  wangjinhang staff          93 Sun Feb  8 16:37:42 2015 1845ebbba783cbe8958becd7fe53b946d59d85
+[1;40;32m0f[0m:
+-r--r--r--    1  wangjinhang staff          85 Sun Feb  8 16:37:42 2015 1ee003ab114dbb439e75887d6fffe2f421b064
+-r--r--r--    1  wangjinhang staff        1863 Sun Feb  8 16:37:42 2015 fc0bc3ebde24bbcd6b9b14e02810b994331c8f
+[1;40;32m11[0m:
+-r--r--r--    1  wangjinhang staff         101 Sun Feb  8 16:37:42 2015 7d1822f43d3fc85acb7b0cbab21b223478667d
+[1;40;32m16[0m:
+-r--r--r--    1  wangjinhang staff         190 Sun Feb  8 16:37:42 2015 2513657c922f54a94a5adda114fd290df330f8
+-r--r--r--    1  wangjinhang staff         157 Sun Feb  8 16:37:42 2015 757e8d2349652d080cdce762c793af066d36cc
+[1;40;32m1b[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 73d8cfaec17a5a93339b150e45a494e55e6ade
+[1;40;32m1c[0m:
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 775586f46f941261d8072b091b8eb9848f293c
+[1;40;32m24[0m:
+-r--r--r--    1  wangjinhang staff         123 Sun Feb  8 16:37:42 2015 2d4fa190796f1b7ddef9bb58b7def291306b6f
+[1;40;32m28[0m:
+-r--r--r--    1  wangjinhang staff         173 Sun Feb  8 16:37:42 2015 b5aab37b1d28beaa959170671ca3b319c7093c
+[1;40;32m29[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 d78df0c755a5702f076560a5f3bbf60716ecd9
+[1;40;32m2a[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 f78b2a1b8307cb314cbbabfeb079d5bb6d5bb6
+[1;40;32m2e[0m:
+-r--r--r--    1  wangjinhang staff        1784 Sun Feb  8 16:37:42 2015 d55aff3ab52308bf91ff8c18d42fe44f4d6733
+[1;40;32m30[0m:
+-r--r--r--    1  wangjinhang staff         158 Sun Feb  8 16:47:52 2015 c4b9fc9d6dbe7b9ef7f9ca07ef25fccc82b14b
+[1;40;32m34[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 9983785967b1f3c035d391a6bee92a602902b5
+[1;40;32m36[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 de942cc2581d67a56a9123bfaf205ef18aabad
+[1;40;32m37[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 c73433b4dfb5ba99590d97344f71ba5ad5e030
+[1;40;32m3c[0m:
+-r--r--r--    1  wangjinhang staff         168 Sun Feb  8 16:37:42 2015 93545b3973ac38e6dc99f6364882bfc7d39ffa
+[1;40;32m3e[0m:
+-r--r--r--    1  wangjinhang staff         166 Sun Feb  8 16:37:42 2015 5b59bd75c0031068680fdd48621ad987fe2b8e
+-r--r--r--    1  wangjinhang staff         169 Sun Feb  8 16:37:42 2015 ff8a16c0c4aeda0d07e8ddac827a7abc731ae7
+[1;40;32m42[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 511f1b366e8cc830794378062e7e539229543f
+[1;40;32m46[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 681c948b6a35953f9b95138eb802c99ee12861
+-r--r--r--    1  wangjinhang staff          55 Sun Feb  8 16:37:42 2015 8bdd96f69cff7f714d65eefebc8cd186b2ea77
+[1;40;32m48[0m:
+-r--r--r--    1  wangjinhang staff         111 Sun Feb  8 16:37:42 2015 18ce8c9bf0f5bfac9a01183a92c63bcb5f6f3b
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:48:40 2015 d373def39acd7ebe93c55c662a7c6ba1fa370d
+[1;40;32m4b[0m:
+-r--r--r--    1  wangjinhang staff        1710 Sun Feb  8 16:37:42 2015 9da770583fd970a3e8189f61cb8e3f7cff746f
+[1;40;32m4c[0m:
+-r--r--r--    1  wangjinhang staff        1776 Sun Feb  8 16:37:42 2015 b3a6ef083e2ff95442f5b2425e7467e9a54eba
+[1;40;32m4d[0m:
+-r--r--r--    1  wangjinhang staff        2207 Sun Feb  8 16:47:38 2015 2e916f1280a0d81d2b034df6010e9433ccf5bf
+[1;40;32m51[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 b2def149c6ad0e2f017943dfe75710024ed033
+[1;40;32m53[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 47a98f8e39a4a96619a6e5d0828aef4237944b
+[1;40;32m57[0m:
+-r--r--r--    1  wangjinhang staff        1794 Sun Feb  8 16:37:42 2015 ca7b0592211c546af03175af10f7ff9f6e89bf
+[1;40;32m61[0m:
+-r--r--r--    1  wangjinhang staff        1798 Sun Feb  8 16:37:42 2015 c9e42a8425984449e7da5c4a12a4fbc306e210
+[1;40;32m62[0m:
+-r--r--r--    1  wangjinhang staff         167 Sun Feb  8 16:37:42 2015 364218a2508e67c137afd45b2f2289721553b5
+-r--r--r--    1  wangjinhang staff         534 Sun Feb  8 16:37:42 2015 9bd09a1e340cf94a04135dbbf55cfd2e896039
+[1;40;32m66[0m:
+-r--r--r--    1  wangjinhang staff         226 Sun Feb  8 16:37:42 2015 e57d055a8180137f1152617de6aec7931d5592
+[1;40;32m69[0m:
+-r--r--r--    1  wangjinhang staff         238 Sun Feb  8 16:48:02 2015 fa525dbfd2a5e02b0a3ffa98664a105f22d4d3
+[1;40;32m6b[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 1342b2937dfca06c44cef871efaeca90c1e395
+[1;40;32m6e[0m:
+-r--r--r--    1  wangjinhang staff         190 Sun Feb  8 16:37:42 2015 d0a0fc482854914d41831e08ef64333478679d
+[1;40;32m70[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 2f97a47ee44344c73ffc481efa2e83e0f4a7a7
+[1;40;32m72[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 ab1f325b57ac9238eade59891ff5697881dca2
+[1;40;32m76[0m:
+-r--r--r--    1  wangjinhang staff         199 Sun Feb  8 16:37:42 2015 65fdc313ed191a8c9a17050ef2223a0039ca65
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 8fa3f528a3ccd0c86f48404d275cdb027d5e25
+[1;40;32m7d[0m:
+-r--r--r--    1  wangjinhang staff        1786 Sun Feb  8 16:37:42 2015 027aa8bb8dd9bc994dc08665eeca990326d9cd
+[1;40;32m80[0m:
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 bce7946686853fafe86604ab03d2d7b1fa91dd
+[1;40;32m83[0m:
+-r--r--r--    1  wangjinhang staff         131 Sun Feb  8 16:37:42 2015 16513e7d75acb788d9939a45afd26f8d1aa35b
+[1;40;32m86[0m:
+-r--r--r--    1  wangjinhang staff         210 Sun Feb  8 16:37:42 2015 b93d87f48f2811331a79f9ed9da4135cccd5ec
+[1;40;32m87[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 b3a184775a2df00eead56f3ec8a34113bfd813
+[1;40;32m89[0m:
+-r--r--r--    1  wangjinhang staff         161 Sun Feb  8 16:37:42 2015 fb94ab86ec218fea8053af467cb9bbc24219cf
+[1;40;32m8a[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 3f16c752f2c423cb5e4d54f3a366ff9b6ac759
+[1;40;32m8b[0m:
+-r--r--r--    1  wangjinhang staff         175 Sun Feb  8 16:48:40 2015 3cd7423ac0824fc5a61440fb3cb08b0451767b
+[1;40;32m8c[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 e3a038b6a5cd636ba7039a9f84dddee80869d9
+[1;40;32m93[0m:
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 f06dfb9218a02d4795a5148b238984367875e9
+[1;40;32m98[0m:
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 c7c7c11978e4212e31f7aa3b5b4550c3d6ecb1
+[1;40;32ma0[0m:
+-r--r--r--    1  wangjinhang staff         178 Sun Feb  8 16:37:42 2015 7abf0adc3d70bc66bd966a4c471050dfd213eb
+[1;40;32ma4[0m:
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 2ac0741ba3f03e79bcaf7f3b381de18eb65aa3
+[1;40;32ma7[0m:
+-r--r--r--    1  wangjinhang staff         185 Sun Feb  8 16:37:42 2015 fb67a15ce2ab594eb48df1228f3b5adec57392
+[1;40;32mad[0m:
+-r--r--r--    1  wangjinhang staff        6150 Sun Feb  8 16:37:42 2015 c25259d672907b0f4712254f1c3c83a9358177
+[1;40;32mae[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 d346946f62234bd9636b8fd9e9761e62a8b883
+[1;40;32maf[0m:
+-r--r--r--    1  wangjinhang staff         111 Sun Feb  8 16:37:42 2015 4015e03b7dd296c7f63c36798cb99f81515fc3
+[1;40;32mb1[0m:
+-r--r--r--    1  wangjinhang staff         273 Sun Feb  8 16:37:42 2015 4c591cec20ca399f2fe58db6c2a944a4fc7aab
+[1;40;32mb3[0m:
+-r--r--r--    1  wangjinhang staff        1775 Sun Feb  8 16:37:42 2015 7aab70194c189ef367358c945c3df5fbbc08c2
+[1;40;32mb5[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 660f58c499041ab477224bf16e8d0f21f398b2
+[1;40;32mb6[0m:
+-r--r--r--    1  wangjinhang staff         109 Sun Feb  8 16:37:42 2015 8dbe848b33f20656b1b8fdb8ede2fdeeaa3acd
+[1;40;32mba[0m:
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 d31d870fccd71377e5e6d7c123f0cb80056893
+[1;40;32mbb[0m:
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 a93ac8cabf56f49c6dd97ccaaa0eb19fe87439
+[1;40;32mbc[0m:
+-r--r--r--    1  wangjinhang staff        1737 Sun Feb  8 16:37:42 2015 5e689200110ba5e54d27f4cb2a502a41666d50
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 e3c55e754a625ec68172ec09970abd90a8f6eb
+[1;40;32mbd[0m:
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:37:42 2015 50aff49d9072cb3f45938582549948e710a04b
+[1;40;32mbe[0m:
+-r--r--r--    1  wangjinhang staff         263 Sun Feb  8 16:37:42 2015 89d0e9b9aaf80b92f74b9982c41a47d905a550
+[1;40;32mbf[0m:
+-r--r--r--    1  wangjinhang staff         192 Sun Feb  8 16:37:42 2015 08d0b2b6bd5296de67bb58886af791839513b5
+[1;40;32mc0[0m:
+-r--r--r--    1  wangjinhang staff         165 Sun Feb  8 16:37:42 2015 b6f3dd97bef8d3573d7ccc467f7a0b408aa994
+[1;40;32mc3[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 8da5bebaaa1add0609bb577fee0feb130c75de
+-r--r--r--    1  wangjinhang staff         161 Sun Feb  8 16:37:42 2015 ce6f2ed13eff01253f1f46cbeadfc704f6dad0
+[1;40;32mc6[0m:
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:37:42 2015 5691c469c89e162f3182665d30fd2d91a4ddd6
+[1;40;32mc7[0m:
+-r--r--r--    1  wangjinhang staff          24 Sun Feb  8 16:37:42 2015 3b9803d4e5585a8cb370e25ecc156503a27ca8
+[1;40;32mcd[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 d9a9f74e9e2384b54a0f5967c41d5b899eaf77
+[1;40;32md3[0m:
+-r--r--r--    1  wangjinhang staff         194 Sun Feb  8 16:37:42 2015 8045b704b2073811eb6c5be4b544293f1ddf9c
+-r--r--r--    1  wangjinhang staff          98 Sun Feb  8 16:37:42 2015 9fe811676c6858f6ba7667c8456efd4e09b1bb
+[1;40;32md6[0m:
+-r--r--r--    1  wangjinhang staff        7710 Sun Feb  8 16:37:42 2015 a93266f748d606b884f9434ff662fe80b9dc21
+[1;40;32mdb[0m:
+-r--r--r--    1  wangjinhang staff          80 Sun Feb  8 16:37:42 2015 2379c5c53764e8954b1d91b14e7c4e6f4fc06a
+[1;40;32mde[0m:
+-r--r--r--    1  wangjinhang staff         263 Sun Feb  8 16:37:42 2015 93739a74e35a13b839fa043a30d211ca59b3b7
+[1;40;32me3[0m:
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 c132cba9f255af02867a784eeab552063df3fb
+-r--r--r--    1  wangjinhang staff          52 Sun Feb  8 16:37:42 2015 f24eefa7d934afb31b96c1303718dc8a84d6dc
+[1;40;32me5[0m:
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 8da2bdefa0b4cd04e33435b340057b48353767
+-r--r--r--    1  wangjinhang staff         157 Sun Feb  8 16:37:42 2015 fd7e7cf742de5e9176f69bab7e00833285a7f0
+[1;40;32me8[0m:
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 d65cd8a0608976d27ed2a21e554f7fbf978ee2
+[1;40;32me9[0m:
+-r--r--r--    1  wangjinhang staff         364 Sun Feb  8 16:37:42 2015 0a39282e9369b0b0815ec4a44aa8693b72d76b
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 c2593da4bb83cd36afebe61f037a039dd64bad
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 c30fa57b404972e925b0271ae81249ce684360
+[1;40;32meb[0m:
+-r--r--r--    1  wangjinhang staff         175 Sun Feb  8 16:37:42 2015 7b3cbe44b5b0401bf1a35a6c30c906b072a9d9
+[1;40;32mf0[0m:
+-r--r--r--    1  wangjinhang staff         163 Sun Feb  8 16:37:42 2015 96ddbd32986f86e341e6ab0413c0c8ed180a54
+[1;40;32mf1[0m:
+-r--r--r--    1  wangjinhang staff         185 Sun Feb  8 16:37:42 2015 34c77a76fbef134e2081077255a5197de71225
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:47:52 2015 781a83351e3f16b16828eeeb5c9dd1ac850c87
+[1;40;32mf5[0m:
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 8fd97081a44f0f51f40266d5d89272176fd91b
+[1;40;32mf8[0m:
+-r--r--r--    1  wangjinhang staff         187 Sun Feb  8 16:37:42 2015 e031b776d4727d33de1f1000d9c35766fd36f2
+[1;40;32mfb[0m:
+-r--r--r--    1  wangjinhang staff        1728 Sun Feb  8 16:37:42 2015 50bb92473cfd6badb45bdf618101b965cd327a
+[1;40;32mff[0m:
+-r--r--r--    1  wangjinhang staff        1787 Sun Feb  8 16:37:42 2015 6b99889e9dbac153e844dc0649cc2d939d006f
+-r--r--r--    1  wangjinhang staff         183 Sun Feb  8 16:37:42 2015 b4424efae94ae988a58b05f896b73d097b70e1
+[1;40;32minfo[0m:
+[1;40;32mpack[0m:
+[1;40;32mrefs[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32mheads[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mremotes[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mtags[0m
+[1;40;32mheads[0m:
+-rw-r--r--    1  wangjinhang staff          41 Sun Feb  8 16:48:40 2015 master
+[1;40;32mremotes[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32morigin[0m
+[1;40;32morigin[0m:
+-rw-r--r--    1  wangjinhang staff          32 Sun Feb  8 16:37:42 2015 HEAD
+[1;40;32mtags[0m:
+[1;40;32mLICENSE[0m:
+-rwxr-xr-x    1  wangjinhang staff       20716 Sun Feb  8 22:11:34 2015 ls
+-rwxr-xr-x    1  wangjinhang staff       27156 Sun Feb  8 22:11:34 2015 rshell
+[1;40;32mbin[0m:
+-rw-r--r--    1  wangjinhang staff       16988 Sun Feb  8 22:11:34 2015 ls.o
+-rw-r--r--    1  wangjinhang staff       21888 Sun Feb  8 22:11:34 2015 main.o
+-rw-r--r--    1  wangjinhang staff        6884 Sun Feb  8 22:11:34 2015 rshell.o
+[1;40;32msrc[0m:
+-rw-r--r--    1  wangjinhang staff        7201 Sun Feb  8 22:08:05 2015 [1;40;31mls.cpp[0m
+-rw-r--r--    1  wangjinhang staff        5820 Sun Feb  8 16:37:42 2015 [1;40;31mmain.cpp[0m
+-rw-r--r--    1  wangjinhang staff         377 Sun Feb  8 16:37:42 2015 [1;40;31mrshell.cpp[0m
+-rw-r--r--    1  wangjinhang staff         142 Sun Feb  8 16:37:42 2015 rshell.h
+[1;40;32mtests[0m:
+-rw-r--r--    1  wangjinhang staff       46768 Sun Feb  8 16:37:42 2015 exec.script
+-rw-r--r--    1  wangjinhang staff      140480 Sun Feb  8 22:12:53 2015 ls.script
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -Rl[K[KalR[K[K[Ka -l
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 22:11:34 2015 [1;40;32m.[0m
+drwx------   37  wangjinhang staff        1258 Sun Feb  8 20:34:56 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff        6148 Sun Feb  8 22:09:00 2015 .DS_Store
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m.git[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:34 2015 [1;40;32mLICENSE[0m
+-rw-r--r--    1  wangjinhang staff       18027 Sun Feb  8 16:37:42 2015 Makefile
+-rw-r--r--    1  wangjinhang staff         396 Sun Feb  8 16:43:05 2015 README.md
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 22:11:34 2015 [1;40;32mbin[0m
+-rw-r--r--    1  wangjinhang staff        3420 Sun Feb  8 16:37:42 2015 obj
+drwxr-xr-x    7  wangjinhang staff         238 Sun Feb  8 22:09:07 2015 [1;40;32msrc[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:23 2015 [1;40;32mtests[0m
+wangjinhang@will-Pro~/Desktop/rshell $ bin/ls -a -l[Kl -R
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 22:11:34 2015 [1;40;32m.[0m
+drwx------   37  wangjinhang staff        1258 Sun Feb  8 20:34:56 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff        6148 Sun Feb  8 22:09:00 2015 .DS_Store
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m.git[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:34 2015 [1;40;32mLICENSE[0m
+-rw-r--r--    1  wangjinhang staff       18027 Sun Feb  8 16:37:42 2015 Makefile
+-rw-r--r--    1  wangjinhang staff         396 Sun Feb  8 16:43:05 2015 README.md
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 22:11:34 2015 [1;40;32mbin[0m
+-rw-r--r--    1  wangjinhang staff        3420 Sun Feb  8 16:37:42 2015 obj
+drwxr-xr-x    7  wangjinhang staff         238 Sun Feb  8 22:09:07 2015 [1;40;32msrc[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:23 2015 [1;40;32mtests[0m
+[1;40;32m.git[0m:
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m.[0m
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 22:11:34 2015 [1;40;32m..[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mCOMMIT_EDITMSG[0m
+-rw-r--r--    1  wangjinhang staff          37 Sun Feb  8 16:48:40 2015 HEAD
+-rw-r--r--    1  wangjinhang staff         311 Sun Feb  8 16:37:42 2015 branches
+-rw-r--r--    1  wangjinhang staff          73 Sun Feb  8 16:37:41 2015 config
+-rw-r--r--    1  wangjinhang staff          23 Sun Feb  8 16:37:42 2015 description
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 16:37:41 2015 [1;40;32mhooks[0m
+-rw-r--r--    1  wangjinhang staff         648 Sun Feb  8 16:48:02 2015 index
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:41 2015 [1;40;32minfo[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mlogs[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32mobjects[0m
+-rw-r--r--    1  wangjinhang staff         204 Sun Feb  8 16:37:42 2015 packed-refs
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32mrefs[0m
+[1;40;32mCOMMIT_EDITMSG[0m:
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32m.[0m
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+[1;40;32mhooks[0m:
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 16:37:41 2015 [1;40;32m.[0m
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-rwxr-xr-x    1  wangjinhang staff         452 Sun Feb  8 16:37:41 2015 applypatch-msg.sample
+-rwxr-xr-x    1  wangjinhang staff         896 Sun Feb  8 16:37:41 2015 commit-msg.sample
+-rwxr-xr-x    1  wangjinhang staff         189 Sun Feb  8 16:37:41 2015 post-update.sample
+-rwxr-xr-x    1  wangjinhang staff         398 Sun Feb  8 16:37:41 2015 pre-applypatch.sample
+-rwxr-xr-x    1  wangjinhang staff        1642 Sun Feb  8 16:37:41 2015 pre-commit.sample
+-rwxr-xr-x    1  wangjinhang staff        1352 Sun Feb  8 16:37:41 2015 pre-push.sample
+-rwxr-xr-x    1  wangjinhang staff        4951 Sun Feb  8 16:37:41 2015 pre-rebase.sample
+-rwxr-xr-x    1  wangjinhang staff        1239 Sun Feb  8 16:37:41 2015 prepare-commit-msg.sample
+-rwxr-xr-x    1  wangjinhang staff        3611 Sun Feb  8 16:37:41 2015 update.sample
+[1;40;32minfo[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:41 2015 [1;40;32m.[0m
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff         240 Sun Feb  8 16:37:41 2015 exclude
+[1;40;32mlogs[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff         532 Sun Feb  8 16:48:40 2015 HEAD
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mrefs[0m
+[1;40;32mrefs[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m..[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mheads[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mremotes[0m
+[1;40;32mheads[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff         532 Sun Feb  8 16:48:40 2015 master
+[1;40;32mremotes[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m..[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32morigin[0m
+[1;40;32morigin[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff         192 Sun Feb  8 16:37:42 2015 HEAD
+[1;40;32mobjects[0m:
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m.[0m
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:47:52 2015 [1;40;32m00[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m02[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m05[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m07[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m09[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m0c[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m0f[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m11[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m16[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m1b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m1c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m24[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m28[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m29[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m2a[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m2e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:52 2015 [1;40;32m30[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m34[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m36[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m37[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m3c[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m3e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m42[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m46[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:48:40 2015 [1;40;32m48[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m4b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m4c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:38 2015 [1;40;32m4d[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m51[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m53[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m57[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m61[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m62[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m66[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:02 2015 [1;40;32m69[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m6b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m6e[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m70[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m72[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m76[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m7d[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m80[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m83[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m86[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m87[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m89[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m8a[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32m8b[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m8c[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m93[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m98[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma0[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma4[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32ma7[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mad[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mae[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32maf[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb1[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mb6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mba[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbb[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mbc[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbd[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbe[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mbf[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc0[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mc3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mc7[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mcd[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32md3[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32md6[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mdb[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mde[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32me3[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32me5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32me8[0m
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32me9[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32meb[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf0[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:47:52 2015 [1;40;32mf1[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf5[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mf8[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mfb[0m
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32mff[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32minfo[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mpack[0m
+[1;40;32m00[0m:
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:47:52 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 0a050526f24a50c28a5ad8398659ce87cd9a57
+-r--r--r--    1  wangjinhang staff         130 Sun Feb  8 16:37:42 2015 21525b0b31fe5e808a6ec26bab995cdeb1dd01
+-r--r--r--    1  wangjinhang staff         137 Sun Feb  8 16:47:52 2015 5eac63987a77bf56aa343900a60781bcf6a8b5
+[1;40;32m02[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 479cddb4111ff1fa678aead16f9f7eddb634b5
+[1;40;32m05[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         119 Sun Feb  8 16:37:42 2015 48fbc9feed3ad4c74feda9524099bab3f3fd9b
+[1;40;32m07[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 0271ecebe7967772ede3047f73b8cd49c6b5b9
+[1;40;32m09[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 b9e91bfda4136191bdae00db0dac349c5a19b1
+[1;40;32m0c[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff          93 Sun Feb  8 16:37:42 2015 1845ebbba783cbe8958becd7fe53b946d59d85
+[1;40;32m0f[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff          85 Sun Feb  8 16:37:42 2015 1ee003ab114dbb439e75887d6fffe2f421b064
+-r--r--r--    1  wangjinhang staff        1863 Sun Feb  8 16:37:42 2015 fc0bc3ebde24bbcd6b9b14e02810b994331c8f
+[1;40;32m11[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         101 Sun Feb  8 16:37:42 2015 7d1822f43d3fc85acb7b0cbab21b223478667d
+[1;40;32m16[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         190 Sun Feb  8 16:37:42 2015 2513657c922f54a94a5adda114fd290df330f8
+-r--r--r--    1  wangjinhang staff         157 Sun Feb  8 16:37:42 2015 757e8d2349652d080cdce762c793af066d36cc
+[1;40;32m1b[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 73d8cfaec17a5a93339b150e45a494e55e6ade
+[1;40;32m1c[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 775586f46f941261d8072b091b8eb9848f293c
+[1;40;32m24[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         123 Sun Feb  8 16:37:42 2015 2d4fa190796f1b7ddef9bb58b7def291306b6f
+[1;40;32m28[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         173 Sun Feb  8 16:37:42 2015 b5aab37b1d28beaa959170671ca3b319c7093c
+[1;40;32m29[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 d78df0c755a5702f076560a5f3bbf60716ecd9
+[1;40;32m2a[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 f78b2a1b8307cb314cbbabfeb079d5bb6d5bb6
+[1;40;32m2e[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1784 Sun Feb  8 16:37:42 2015 d55aff3ab52308bf91ff8c18d42fe44f4d6733
+[1;40;32m30[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:52 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         158 Sun Feb  8 16:47:52 2015 c4b9fc9d6dbe7b9ef7f9ca07ef25fccc82b14b
+[1;40;32m34[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 9983785967b1f3c035d391a6bee92a602902b5
+[1;40;32m36[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 de942cc2581d67a56a9123bfaf205ef18aabad
+[1;40;32m37[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 c73433b4dfb5ba99590d97344f71ba5ad5e030
+[1;40;32m3c[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         168 Sun Feb  8 16:37:42 2015 93545b3973ac38e6dc99f6364882bfc7d39ffa
+[1;40;32m3e[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         166 Sun Feb  8 16:37:42 2015 5b59bd75c0031068680fdd48621ad987fe2b8e
+-r--r--r--    1  wangjinhang staff         169 Sun Feb  8 16:37:42 2015 ff8a16c0c4aeda0d07e8ddac827a7abc731ae7
+[1;40;32m42[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 511f1b366e8cc830794378062e7e539229543f
+[1;40;32m46[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 681c948b6a35953f9b95138eb802c99ee12861
+-r--r--r--    1  wangjinhang staff          55 Sun Feb  8 16:37:42 2015 8bdd96f69cff7f714d65eefebc8cd186b2ea77
+[1;40;32m48[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:48:40 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         111 Sun Feb  8 16:37:42 2015 18ce8c9bf0f5bfac9a01183a92c63bcb5f6f3b
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:48:40 2015 d373def39acd7ebe93c55c662a7c6ba1fa370d
+[1;40;32m4b[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1710 Sun Feb  8 16:37:42 2015 9da770583fd970a3e8189f61cb8e3f7cff746f
+[1;40;32m4c[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1776 Sun Feb  8 16:37:42 2015 b3a6ef083e2ff95442f5b2425e7467e9a54eba
+[1;40;32m4d[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:47:38 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        2207 Sun Feb  8 16:47:38 2015 2e916f1280a0d81d2b034df6010e9433ccf5bf
+[1;40;32m51[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 b2def149c6ad0e2f017943dfe75710024ed033
+[1;40;32m53[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 47a98f8e39a4a96619a6e5d0828aef4237944b
+[1;40;32m57[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1794 Sun Feb  8 16:37:42 2015 ca7b0592211c546af03175af10f7ff9f6e89bf
+[1;40;32m61[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1798 Sun Feb  8 16:37:42 2015 c9e42a8425984449e7da5c4a12a4fbc306e210
+[1;40;32m62[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         167 Sun Feb  8 16:37:42 2015 364218a2508e67c137afd45b2f2289721553b5
+-r--r--r--    1  wangjinhang staff         534 Sun Feb  8 16:37:42 2015 9bd09a1e340cf94a04135dbbf55cfd2e896039
+[1;40;32m66[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         226 Sun Feb  8 16:37:42 2015 e57d055a8180137f1152617de6aec7931d5592
+[1;40;32m69[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:02 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         238 Sun Feb  8 16:48:02 2015 fa525dbfd2a5e02b0a3ffa98664a105f22d4d3
+[1;40;32m6b[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 1342b2937dfca06c44cef871efaeca90c1e395
+[1;40;32m6e[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         190 Sun Feb  8 16:37:42 2015 d0a0fc482854914d41831e08ef64333478679d
+[1;40;32m70[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 2f97a47ee44344c73ffc481efa2e83e0f4a7a7
+[1;40;32m72[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 ab1f325b57ac9238eade59891ff5697881dca2
+[1;40;32m76[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         199 Sun Feb  8 16:37:42 2015 65fdc313ed191a8c9a17050ef2223a0039ca65
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 8fa3f528a3ccd0c86f48404d275cdb027d5e25
+[1;40;32m7d[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1786 Sun Feb  8 16:37:42 2015 027aa8bb8dd9bc994dc08665eeca990326d9cd
+[1;40;32m80[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 bce7946686853fafe86604ab03d2d7b1fa91dd
+[1;40;32m83[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         131 Sun Feb  8 16:37:42 2015 16513e7d75acb788d9939a45afd26f8d1aa35b
+[1;40;32m86[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         210 Sun Feb  8 16:37:42 2015 b93d87f48f2811331a79f9ed9da4135cccd5ec
+[1;40;32m87[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 b3a184775a2df00eead56f3ec8a34113bfd813
+[1;40;32m89[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         161 Sun Feb  8 16:37:42 2015 fb94ab86ec218fea8053af467cb9bbc24219cf
+[1;40;32m8a[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 3f16c752f2c423cb5e4d54f3a366ff9b6ac759
+[1;40;32m8b[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         175 Sun Feb  8 16:48:40 2015 3cd7423ac0824fc5a61440fb3cb08b0451767b
+[1;40;32m8c[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 e3a038b6a5cd636ba7039a9f84dddee80869d9
+[1;40;32m93[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 f06dfb9218a02d4795a5148b238984367875e9
+[1;40;32m98[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 c7c7c11978e4212e31f7aa3b5b4550c3d6ecb1
+[1;40;32ma0[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         178 Sun Feb  8 16:37:42 2015 7abf0adc3d70bc66bd966a4c471050dfd213eb
+[1;40;32ma4[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         181 Sun Feb  8 16:37:42 2015 2ac0741ba3f03e79bcaf7f3b381de18eb65aa3
+[1;40;32ma7[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         185 Sun Feb  8 16:37:42 2015 fb67a15ce2ab594eb48df1228f3b5adec57392
+[1;40;32mad[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        6150 Sun Feb  8 16:37:42 2015 c25259d672907b0f4712254f1c3c83a9358177
+[1;40;32mae[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 d346946f62234bd9636b8fd9e9761e62a8b883
+[1;40;32maf[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         111 Sun Feb  8 16:37:42 2015 4015e03b7dd296c7f63c36798cb99f81515fc3
+[1;40;32mb1[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         273 Sun Feb  8 16:37:42 2015 4c591cec20ca399f2fe58db6c2a944a4fc7aab
+[1;40;32mb3[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1775 Sun Feb  8 16:37:42 2015 7aab70194c189ef367358c945c3df5fbbc08c2
+[1;40;32mb5[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 660f58c499041ab477224bf16e8d0f21f398b2
+[1;40;32mb6[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         109 Sun Feb  8 16:37:42 2015 8dbe848b33f20656b1b8fdb8ede2fdeeaa3acd
+[1;40;32mba[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 d31d870fccd71377e5e6d7c123f0cb80056893
+[1;40;32mbb[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 a93ac8cabf56f49c6dd97ccaaa0eb19fe87439
+[1;40;32mbc[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1737 Sun Feb  8 16:37:42 2015 5e689200110ba5e54d27f4cb2a502a41666d50
+-r--r--r--    1  wangjinhang staff         110 Sun Feb  8 16:37:42 2015 e3c55e754a625ec68172ec09970abd90a8f6eb
+[1;40;32mbd[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:37:42 2015 50aff49d9072cb3f45938582549948e710a04b
+[1;40;32mbe[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         263 Sun Feb  8 16:37:42 2015 89d0e9b9aaf80b92f74b9982c41a47d905a550
+[1;40;32mbf[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         192 Sun Feb  8 16:37:42 2015 08d0b2b6bd5296de67bb58886af791839513b5
+[1;40;32mc0[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         165 Sun Feb  8 16:37:42 2015 b6f3dd97bef8d3573d7ccc467f7a0b408aa994
+[1;40;32mc3[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 8da5bebaaa1add0609bb577fee0feb130c75de
+-r--r--r--    1  wangjinhang staff         161 Sun Feb  8 16:37:42 2015 ce6f2ed13eff01253f1f46cbeadfc704f6dad0
+[1;40;32mc6[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:37:42 2015 5691c469c89e162f3182665d30fd2d91a4ddd6
+[1;40;32mc7[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff          24 Sun Feb  8 16:37:42 2015 3b9803d4e5585a8cb370e25ecc156503a27ca8
+[1;40;32mcd[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 d9a9f74e9e2384b54a0f5967c41d5b899eaf77
+[1;40;32md3[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         194 Sun Feb  8 16:37:42 2015 8045b704b2073811eb6c5be4b544293f1ddf9c
+-r--r--r--    1  wangjinhang staff          98 Sun Feb  8 16:37:42 2015 9fe811676c6858f6ba7667c8456efd4e09b1bb
+[1;40;32md6[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        7710 Sun Feb  8 16:37:42 2015 a93266f748d606b884f9434ff662fe80b9dc21
+[1;40;32mdb[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff          80 Sun Feb  8 16:37:42 2015 2379c5c53764e8954b1d91b14e7c4e6f4fc06a
+[1;40;32mde[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         263 Sun Feb  8 16:37:42 2015 93739a74e35a13b839fa043a30d211ca59b3b7
+[1;40;32me3[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         174 Sun Feb  8 16:37:42 2015 c132cba9f255af02867a784eeab552063df3fb
+-r--r--r--    1  wangjinhang staff          52 Sun Feb  8 16:37:42 2015 f24eefa7d934afb31b96c1303718dc8a84d6dc
+[1;40;32me5[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         149 Sun Feb  8 16:37:42 2015 8da2bdefa0b4cd04e33435b340057b48353767
+-r--r--r--    1  wangjinhang staff         157 Sun Feb  8 16:37:42 2015 fd7e7cf742de5e9176f69bab7e00833285a7f0
+[1;40;32me8[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         179 Sun Feb  8 16:37:42 2015 d65cd8a0608976d27ed2a21e554f7fbf978ee2
+[1;40;32me9[0m:
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         364 Sun Feb  8 16:37:42 2015 0a39282e9369b0b0815ec4a44aa8693b72d76b
+-r--r--r--    1  wangjinhang staff          92 Sun Feb  8 16:37:42 2015 c2593da4bb83cd36afebe61f037a039dd64bad
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 c30fa57b404972e925b0271ae81249ce684360
+[1;40;32meb[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         175 Sun Feb  8 16:37:42 2015 7b3cbe44b5b0401bf1a35a6c30c906b072a9d9
+[1;40;32mf0[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         163 Sun Feb  8 16:37:42 2015 96ddbd32986f86e341e6ab0413c0c8ed180a54
+[1;40;32mf1[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:47:52 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         185 Sun Feb  8 16:37:42 2015 34c77a76fbef134e2081077255a5197de71225
+-r--r--r--    1  wangjinhang staff         177 Sun Feb  8 16:47:52 2015 781a83351e3f16b16828eeeb5c9dd1ac850c87
+[1;40;32mf5[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         148 Sun Feb  8 16:37:42 2015 8fd97081a44f0f51f40266d5d89272176fd91b
+[1;40;32mf8[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff         187 Sun Feb  8 16:37:42 2015 e031b776d4727d33de1f1000d9c35766fd36f2
+[1;40;32mfb[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1728 Sun Feb  8 16:37:42 2015 50bb92473cfd6badb45bdf618101b965cd327a
+[1;40;32mff[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+-r--r--r--    1  wangjinhang staff        1787 Sun Feb  8 16:37:42 2015 6b99889e9dbac153e844dc0649cc2d939d006f
+-r--r--r--    1  wangjinhang staff         183 Sun Feb  8 16:37:42 2015 b4424efae94ae988a58b05f896b73d097b70e1
+[1;40;32minfo[0m:
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+[1;40;32mpack[0m:
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32m.[0m
+drwxr-xr-x   91  wangjinhang staff        3094 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+[1;40;32mrefs[0m:
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x   14  wangjinhang staff         476 Sun Feb  8 16:48:40 2015 [1;40;32m..[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32mheads[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32mremotes[0m
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32mtags[0m
+[1;40;32mheads[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:48:40 2015 [1;40;32m.[0m
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff          41 Sun Feb  8 16:48:40 2015 master
+[1;40;32mremotes[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32m..[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32morigin[0m
+[1;40;32morigin[0m:
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m.[0m
+drwxr-xr-x    3  wangjinhang staff         102 Sun Feb  8 16:37:42 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff          32 Sun Feb  8 16:37:42 2015 HEAD
+[1;40;32mtags[0m:
+drwxr-xr-x    2  wangjinhang staff          68 Sun Feb  8 16:37:41 2015 [1;40;32m.[0m
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 16:37:42 2015 [1;40;32m..[0m
+[1;40;32mLICENSE[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:34 2015 [1;40;32m.[0m
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 22:11:34 2015 [1;40;32m..[0m
+-rwxr-xr-x    1  wangjinhang staff       20716 Sun Feb  8 22:11:34 2015 ls
+-rwxr-xr-x    1  wangjinhang staff       27156 Sun Feb  8 22:11:34 2015 rshell
+[1;40;32mbin[0m:
+drwxr-xr-x    5  wangjinhang staff         170 Sun Feb  8 22:11:34 2015 [1;40;32m.[0m
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 22:11:34 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff       16988 Sun Feb  8 22:11:34 2015 ls.o
+-rw-r--r--    1  wangjinhang staff       21888 Sun Feb  8 22:11:34 2015 main.o
+-rw-r--r--    1  wangjinhang staff        6884 Sun Feb  8 22:11:34 2015 rshell.o
+[1;40;32msrc[0m:
+drwxr-xr-x    7  wangjinhang staff         238 Sun Feb  8 22:09:07 2015 [1;40;32m.[0m
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 22:11:34 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff        6148 Sun Feb  8 22:09:12 2015 .DS_Store
+-rw-r--r--    1  wangjinhang staff        7201 Sun Feb  8 22:08:05 2015 [1;40;31mls.cpp[0m
+-rw-r--r--    1  wangjinhang staff        5820 Sun Feb  8 16:37:42 2015 [1;40;31mmain.cpp[0m
+-rw-r--r--    1  wangjinhang staff         377 Sun Feb  8 16:37:42 2015 [1;40;31mrshell.cpp[0m
+-rw-r--r--    1  wangjinhang staff         142 Sun Feb  8 16:37:42 2015 rshell.h
+[1;40;32mtests[0m:
+drwxr-xr-x    4  wangjinhang staff         136 Sun Feb  8 22:11:23 2015 [1;40;32m.[0m
+drwxr-xr-x   11  wangjinhang staff         374 Sun Feb  8 22:11:34 2015 [1;40;32m..[0m
+-rw-r--r--    1  wangjinhang staff       46768 Sun Feb  8 16:37:42 2015 exec.script
+-rw-r--r--    1  wangjinhang staff      188611 Sun Feb  8 22:13:28 2015 ls.script
+wangjinhang@will-Pro~/Desktop/rshell $ exit
+exit
+
+Script done on Sun Feb  8 22:13:36 2015
