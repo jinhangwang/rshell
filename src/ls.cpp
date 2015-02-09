@@ -18,7 +18,7 @@ using namespace std;
 
 #define MAXROWLEN   80
 #define NAME_MAX    255
-#define PATH_MAX    1024
+#define MYPATH_MAX    1024
 #define PARAM_NONE  0 //no param
 #define PARAM_A     1 //-a
 #define PARAM_L     2 //-l
@@ -141,8 +141,8 @@ void display(int flag,char *pathname, char *name) {
 void display_dir(int flag_param,const char *path) {
     DIR* dir;
     struct dirent* dirent;
-    char filenames[256][PATH_MAX+1],temp[PATH_MAX+1];
-    char pathnames[256][PATH_MAX+1];
+    char filenames[256][MYPATH_MAX+1],temp[MYPATH_MAX+1];
+    char pathnames[256][MYPATH_MAX+1];
     int count = 0;
     
     if((dir = opendir(path)) == NULL) {
@@ -222,7 +222,7 @@ void display_dir(int flag_param,const char *path) {
 int main(int argc, char **argv) {
     int i,j,k;
     int num; 
-    char path[PATH_MAX + 1];
+    char path[MYPATH_MAX + 1];
     char param[1000];
     int  flag_param = PARAM_NONE;
     struct stat buf;
