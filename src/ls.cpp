@@ -11,22 +11,24 @@
 #include <pwd.h>
 #include <grp.h>
 #include <time.h>
+char pathab[1000];
+char t;
 
 using namespace std;
 
+#define MAXROWLEN   80
+#define NAME_MAX    255
+#define PATH_MAX    1024
 #define PARAM_NONE  0 //no param
 #define PARAM_A     1 //-a
 #define PARAM_L     2 //-l
 #define PARAM_R     4 //-R
-#define MAXROWLEN   80
-#define NAME_MAX    255
-#define PATH_MAX    1024
 
 int g_leave_len = MAXROWLEN;
 int g_maxlen;
 
 void my_error(const char* errstring, int line) {
-    fprintf(stderr,"line:%d",line);
+    fprintf(stderr,"line:%d  ",line);
     perror(errstring);
     exit(1);
 }
@@ -41,8 +43,13 @@ void display_single(char *name) {
     
     len = strlen(name);
     len = g_maxlen - len;
-    
-    printf("%-s",name);
+    if(t == 'd')
+        printf("\033[1;40;32m%s\033[0m",name);
+    else if(name[strlen(name)-1]=='p' && name[strlen(name)-2]=='p' 
+        && name[strlen(name)-3]=='c' && name[strlen(name)-4]=='.')
+                printf("\033[1;40;31m%s\033[0m",name);
+    else
+        printf("%-s\t",name);
     
     for(i=0;i<len;i++)
         printf(" ");
@@ -57,11 +64,7 @@ void display_attribute(struct stat buf, char *name) {
     struct group *grp;
   
     //show the property of the file
-    cout << (S_ISLNK(buf.st_mode)?"1":S_ISREG(buf.st_mode)?"-":
-             S_ISDIR(buf.st_mode)?"d":S_ISCHR(buf.st_mode)?"c":
-             S_ISBLK(buf.st_mode)?"b":S_ISFIFO(buf.st_mode)?"f":
-             S_ISSOCK(buf.st_mode)?"s":"");
-
+    cout << t;
     //show the privilidge of the file
     cout << (buf.st_mode & S_IRUSR? "r" : "-");
     cout << (buf.st_mode & S_IWUSR? "w" : "-");
@@ -87,24 +90,20 @@ void display_attribute(struct stat buf, char *name) {
     printf(" %s ",buf_time);
 }
 
-void display(int flag,char *pathname) {
+void display(int flag,char *pathname, char *name) {
     int i,j;
     struct stat buf;
-    char name[NAME_MAX + 1];
+//    char name[NAME_MAX + 1];
 
-    
-    for(i=0,j=0;i<strlen(pathname);i++) {
-        if(pathname[i] == '/')
-            j = 0;
-        else
-            name[j++] = pathname[i];
-    }
-    name[j] = 0;
-    
     if(lstat(pathname,&buf) == -1) {
         my_error("stat",__LINE__);
     }
-    
+
+    t = (S_ISLNK(buf.st_mode)?'1':S_ISREG(buf.st_mode)?'-':
+             S_ISDIR(buf.st_mode)?'d':S_ISCHR(buf.st_mode)?'c':
+             S_ISBLK(buf.st_mode)?'b':S_ISFIFO(buf.st_mode)?'f':
+             S_ISSOCK(buf.st_mode)?'s':' ');
+
     if(flag == PARAM_NONE) {
         if(name[0] != '.')
             display_single(name);
@@ -116,50 +115,34 @@ void display(int flag,char *pathname) {
     else if(flag == PARAM_L) {
         if(name[0] != '.') {
             display_attribute(buf,name);
+            if(t=='d')
+                printf("\033[1;40;32m%s\033[0m\n",name);
+            else if(name[strlen(name)-1]=='p' && name[strlen(name)-2]=='p' 
+                && name[strlen(name)-3]=='c' && name[strlen(name)-4]=='.')
+                printf("\033[1;40;31m%s\033[0m\n",name);
+            else
             cout << name << endl;
         }
     }
 
     else if(flag == (PARAM_A | PARAM_L)) {
         display_attribute(buf,name);
-        cout << name << endl;
-    }
-
-/*    
-    else if(flag == PARAM_R) {
-        if(name[0] != '.') {
-            display_attribute(buf,name);
+        if(t=='d')
+            printf("\033[1;40;32m%s\033[0m\n",name);
+        else if(name[strlen(name)-1]=='p' && name[strlen(name)-2]=='p' 
+                && name[strlen(name)-3]=='c' && name[strlen(name)-4]=='.')
+                printf("\033[1;40;31m%s\033[0m\n",name);
+        else
             cout << name << endl;
-            if(S_ISDIR(buf.st_mode))
-
-        }
+            
     }
-*/
-
-/*
-    else if(flag == (PARAM_A | PARAM_R)) {
-        cout << "do -aR!" << endl;
-        //display_attribute(buf,name);
-        //cout << name << endl;
-    }
-
-    else if(flag == (PARAM_L | PARAM_R)) {
-        cout << "do -lR!" << endl;
-        //display_attribute(buf,name);
-        //cout << name << endl;
-    }
-    else if(flag == (PARAM_A | PARAM_L | PARAM_R)) {
-        cout << "do -alR!" << endl;
-        //display_attribute(buf,name);
-        //cout << name << endl;
-    }
-*/
 }
 
 void display_dir(int flag_param,const char *path) {
     DIR* dir;
     struct dirent* dirent;
     char filenames[256][PATH_MAX+1],temp[PATH_MAX+1];
+    char pathnames[256][PATH_MAX+1];
     int count = 0;
     
     if((dir = opendir(path)) == NULL) {
@@ -187,10 +170,14 @@ void display_dir(int flag_param,const char *path) {
         if(dirent == NULL) {
             my_error("readdir",__LINE__);
         }
-        strncpy(filenames[i],path,len);
-        filenames[i][len] = 0;
-        strcat(filenames[i],dirent->d_name);
-        filenames[i][len+strlen(dirent->d_name)] = 0;
+        strcpy(pathnames[i],path);
+        char temp[5];
+        strcpy(temp,"/");
+        strcat(pathnames[i],temp);
+        strcat(pathnames[i],dirent->d_name);
+        strcpy(filenames[i],dirent->d_name);
+
+        pathnames[i][len+strlen(dirent->d_name)+1] = 0;
     }
     
     for(i=0;i<count-1;i++)
@@ -201,12 +188,12 @@ void display_dir(int flag_param,const char *path) {
                 strcpy(filenames[i] , temp);
             }
         }
-    
+
     for(i=0;i<count;i++)
         if(flag_param>=4) 
-            display(flag_param-4,filenames[i]);
+            display(flag_param-4,pathnames[i],filenames[i]);
         else
-            display(flag_param,filenames[i]);
+            display(flag_param,pathnames[i],filenames[i]);
 
     if(closedir(dir)==-1)
         my_error("closedir error",__LINE__);
@@ -217,16 +204,15 @@ void display_dir(int flag_param,const char *path) {
     if(flag_param >= 4) {
         for(i=0;i<count;i++) {
             struct stat dirbuf;
-            strcpy(temp,filenames[i]);
+            char* temp = pathnames[i];
+
+            if(temp[strlen(temp)-1]=='.') continue; // skip ./. and ./..
+            
             if(lstat(temp,&dirbuf) == -1) {
                 my_error("stat ",__LINE__);
             }
             else if(S_ISDIR(dirbuf.st_mode)) {
-                cout << filenames[i] << endl;
-                for (j = 0; j < strlen(temp)-2; ++j)
-                {
-                     temp[j] = temp[j+2];   
-                }
+               printf("\033[1;40;32m%s\033[0m:\n",filenames[i]);
                 display_dir(flag_param,temp);
             }
         }
@@ -256,8 +242,6 @@ int main(int argc, char **argv) {
     // input argv      param[]
     // -a -l           al
     // -al             al
-
-//    cout << "param[] = " << param << endl;
     
     for(i=0;i<j;i++) {
         if(param[i] == 'a') {
@@ -274,12 +258,10 @@ int main(int argc, char **argv) {
             exit(1);
         }
     }
-//    cout << "flag_param = " << flag_param << endl;
     
     param[j] = 0;
-
-    strcpy(path,"./");
-    path[2] = 0;
+    getcwd(pathab,1000);
+    strcpy(path,pathab);
     display_dir(flag_param,path);
     return 0;
 }
