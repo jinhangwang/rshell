@@ -232,10 +232,21 @@ int main(int argc, char **argv) {
     for(i=1;i<argc;i++) {
         if(argv[i][0] == '-') {
             for(k=1;k<strlen(argv[i]);k++) {
-                param[j] = argv[i][k];
-                j++;
+                if(argv[i][k] == 'a' || argv[i][k] == 'l' || argv[i][k] == 'R') {
+                    param[j] = argv[i][k];
+                    j++;
+                }
+                else{
+                    cout << "error parameter：" << argv[i][k] << endl;
+                    exit(1);
+                }
+
             }
             num++;
+        }
+        else{
+            cout << "error parameter：" << argv[i] << endl;
+            exit(1);
         }
     }
     
