@@ -76,6 +76,7 @@ ls -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l -l
 ...
 ```
 for ls:
+```
 bin/ls
 bin/ls -a
 bin/ls -l
