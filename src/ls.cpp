@@ -18,7 +18,7 @@ using namespace std;
 
 #define MAXROWLEN   80
 #define NAME_MAX    255
-#define PATH_MAX    1024
+#define MYPATH_MAX    1024
 #define PARAM_NONE  0 //no param
 #define PARAM_A     1 //-a
 #define PARAM_L     2 //-l
@@ -78,8 +78,10 @@ void display_attribute(struct stat buf, char *name) {
     cout << (buf.st_mode & S_IWOTH? "w" : "-");
     cout << (buf.st_mode & S_IXOTH? "x " : "- ");
   
-    psd = getpwuid(buf.st_uid);
-    grp = getgrgid(buf.st_gid);
+    if(NULL==(psd = getpwuid(buf.st_uid)))
+        perror("getpwuid err");
+    if(NULL==(grp = getgrgid(buf.st_gid)))
+        perror("getgrgid err");
     printf("%4d  ",buf.st_nlink);   // print the file it contains
     printf("%-8s ",psd->pw_name);   // print the owner
     printf("%-8s ",grp->gr_name);   // print the group
@@ -141,8 +143,8 @@ void display(int flag,char *pathname, char *name) {
 void display_dir(int flag_param,const char *path) {
     DIR* dir;
     struct dirent* dirent;
-    char filenames[256][PATH_MAX+1],temp[PATH_MAX+1];
-    char pathnames[256][PATH_MAX+1];
+    char filenames[256][MYPATH_MAX+1],temp[MYPATH_MAX+1];
+    char pathnames[256][MYPATH_MAX+1];
     int count = 0;
     
     if((dir = opendir(path)) == NULL) {
@@ -222,7 +224,7 @@ void display_dir(int flag_param,const char *path) {
 int main(int argc, char **argv) {
     int i,j,k;
     int num; 
-    char path[PATH_MAX + 1];
+    char path[MYPATH_MAX + 1];
     char param[1000];
     int  flag_param = PARAM_NONE;
     struct stat buf;
@@ -232,10 +234,21 @@ int main(int argc, char **argv) {
     for(i=1;i<argc;i++) {
         if(argv[i][0] == '-') {
             for(k=1;k<strlen(argv[i]);k++) {
-                param[j] = argv[i][k];
-                j++;
+                if(argv[i][k] == 'a' || argv[i][k] == 'l' || argv[i][k] == 'R') {
+                    param[j] = argv[i][k];
+                    j++;
+                }
+                else{
+                    cout << "error parameter：" << argv[i][k] << endl;
+                    exit(1);
+                }
+
             }
             num++;
+        }
+        else{
+            cout << "error parameter：" << argv[i] << endl;
+            exit(1);
         }
     }
     
@@ -258,9 +271,9 @@ int main(int argc, char **argv) {
             exit(1);
         }
     }
-    
     param[j] = 0;
-    getcwd(pathab,1000);
+    if(NULL==(getcwd(pathab,1000)))
+        perror("getcwd err");
     strcpy(path,pathab);
     display_dir(flag_param,path);
     return 0;
