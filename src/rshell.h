@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <sys/wait.h>
 #include <pwd.h>
 #include <iostream>
 #include <string.h>
