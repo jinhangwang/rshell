@@ -1,0 +1,116 @@
+Script started on Sun Mar  8 22:20:18 2015
+wangjinhang@will-Pro~/Desktop/rshell/tests ld up
+wangjinhang@will-Pro~/Desktop/rshell $ make
+mkdir obj
+g++ -c -o obj/rshell.o src/rshell.cpp
+g++ -c -o obj/main.o src/main.cpp
+mkdir bin
+g++ -o bin/rshell obj/rshell.o obj/main.o
+g++ src/cp.cpp -o bin/cp
+wangjinhang@will-Pro~/Desktop/n/rshell
+
+# show current location
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell$ pwd
+/Users/wangjinhang/Desktop/rshell
+
+# change the location by "cd .."
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell$ cd ..
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop$ pwd
+/Users/wangjinhang/Desktop
+
+# change the location by subfolder's name only
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop$ cd rshell/src
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell/src$ pwd
+/Users/wangjinhang/Desktop/rshell/src
+
+# change the location by absolute path to the parent folder
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell/src$ cd /Users
+[rshell]wangjinhang@~will-Pro.local:~/Users$ pwd
+/Users
+
+# wrong path test
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell$ cd .
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell$ pwd
+/Users/wangjinhang/Desktop/rshell
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell$ cd srcc
+chdir: No such file or directory
+wrong call cd
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell$ cd /Users/wangwang
+chdir: No such file or directory
+wrong call cd
+
+# change teh location by absolute path to the child folder
+[rshell]wangjinhang@~will-Pro.local:~/Users$ cd /Users/wangjinhang/Desktop/rshell/src
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell/src$ pwd
+/Users/wangjinhang/Desktop/rshell/src
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell/src$ ls
+cp.cpp     ls.cpp     main.cpp   rshell.cpp rshell.h
+
+# interrupt the cat with ctrl_c without exit
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell/src$ cat
+
+
+
+
+^C
+
+
+#interrupt the cat with ctrl_z and exit
+[rshell]wangjinhang@~will-Pro.local:~/Users/wangjinhang/Desktop/rshell/src$ cat
+
+
+
+
+^Z
+
+
+[1]+  Stopped                 bin/rshell
+wangjinhang@will-Pro~/Desktop/rshell $ exit
+exit
+There are stopped jobs.
+wangjinhang@will-Pro~/Desktop/rshell $ exit
+exit
+
+Script done on Sun Mar  8 22:22:20 2015rshelli$
+
+
+
+
+Script started, output file is typescript
+wangjinhang@mobilenet2-1-188-150~/Desktop/rshell/tests $ cd ..
+wangjinhang@mobilenet2-1-188-150~/Desktop/rshell $ make clean
+rm -rf obj bin
+wangjinhang@mobilenet2-1-188-150~/Desktop/rshell $ make
+mkdir obj
+g++ -ansi -pedantic -Wall -Werror -c -o obj/rshell.o src/rshell.cpp
+g++ -ansi -pedantic -Wall -Werror -c -o obj/type_prompt.o src/type_prompt.cpp
+mkdir bin
+g++ -o bin/rshell obj/rshell.o obj/type_prompt.o
+g++ -ansi -pedantic -Wall -Werror -c -o obj/ls.o src/ls.cpp
+g++ -o bin/ls obj/ls.o
+wangjinhang@mobilenet2-1-188-150~/Desktop/rshell $ bin/rshell
+# Execute a program in the working directory.
+[rshell]wangjinhang@mobilenet2-1-188-150.bulk.ucr.edu:~/Desktop/rshell$ cd ..
+[rshell]wangjinhang@mobilenet2-1-188-150.bulk.ucr.edu:~/Desktop$ ./a.out
+hello
+
+# relative path
+[rshell]wangjinhang@mobilenet2-1-188-150.bulk.ucr.edu:~/Desktop$ cd rshell/src
+[rshell]wangjinhang@mobilenet2-1-188-150.bulk.ucr.edu:~/Desktop/rshell/src$ ./../../a.out
+hello
+
+# Execute a program using an absolute path
+wangjinhang@mobilenet2-1-188-150~/Desktop/rshell $ echo abc
+abc
+wangjinhang@mobilenet2-1-188-150~/Desktop/rshell $ /Users/wangjinhang/Desktop/a.out 
+hello
+
+# Attempt to execute a program that does not exist. This should throw an error.
+[rshell]wangjinhang@mobilenet2-1-188-150.bulk.ucr.edu:~/Desktop/rshell/src$ ./b.out
+error in execv: No such file or directory
+
+[rshell]wangjinhang@mobilenet2-1-188-150.bulk.ucr.edu:~/Desktop/rshell/src$ exit
+wangjinhang@mobilenet2-1-188-150~/Desktop/rshell $ exit
+exit
+
+Script done, output file is typescript
